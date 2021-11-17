@@ -15,6 +15,12 @@ end alu;
 
 architecture arch of alu is
 begin
-	
+process(ALUControl, inputA, inputB, shamt)
+begin
+	-- first check for every instruction type
+	case ALuControl is
+		when "0000" =>
+			ALU_Result <= inputA and inputB;
+end process;
 
 end arch;
