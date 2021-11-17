@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Tue Nov 16 17:48:49 2021
+Tue Nov 16 22:16:25 2021
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -10,13 +10,7 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -40,27 +34,22 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 16 17:48:49 2021       ;
-; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
-; Revision Name                   ; alu                                         ;
-; Top-level Entity Name           ; alu                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 105                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Tue Nov 16 22:16:25 2021           ;
+; Quartus Prime Version       ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name               ; alu                                         ;
+; Top-level Entity Name       ; alu                                         ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -167,222 +156,24 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-
-
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimate of Logic utilization (ALMs needed) ; 0             ;
-;                                             ;               ;
-; Combinational ALUT usage for logic          ; 0             ;
-;     -- 7 input functions                    ; 0             ;
-;     -- 6 input functions                    ; 0             ;
-;     -- 5 input functions                    ; 0             ;
-;     -- 4 input functions                    ; 0             ;
-;     -- <=3 input functions                  ; 0             ;
-;                                             ;               ;
-; Dedicated logic registers                   ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 105           ;
-;                                             ;               ;
-; Total DSP Blocks                            ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; ALUControl[0] ;
-; Maximum fan-out                             ; 1             ;
-; Total fan-out                               ; 105           ;
-; Average fan-out                             ; 0.50          ;
-+---------------------------------------------+---------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |alu                       ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 105  ; 0            ; |alu                ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 105                         ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Tue Nov 16 17:48:30 2021
+    Info: Processing started: Tue Nov 16 22:16:10 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: alu-arch File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 16
-    Info (12023): Found entity 1: alu File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 6
-Info (12127): Elaborating entity "alu" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at alu.vhd(11): used implicit default value for signal "Zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at alu.vhd(12): used implicit default value for signal "ALU_Result" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Zero" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 11
-    Warning (13410): Pin "ALU_Result[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[5]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[6]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[7]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[8]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[9]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[10]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[11]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[12]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[13]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[14]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[15]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[16]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[17]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[18]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[19]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[20]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[21]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[22]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[23]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[24]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[25]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[26]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[27]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[28]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[29]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[30]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-    Warning (13410): Pin "ALU_Result[31]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 72 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ALUControl[0]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 8
-    Warning (15610): No output dependent on input pin "ALUControl[1]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 8
-    Warning (15610): No output dependent on input pin "ALUControl[2]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 8
-    Warning (15610): No output dependent on input pin "ALUControl[3]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 8
-    Warning (15610): No output dependent on input pin "inputA[0]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[1]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[2]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[3]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[4]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[5]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[6]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[7]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[8]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[9]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[10]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[11]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[12]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[13]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[14]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[15]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[16]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[17]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[18]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[19]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[20]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[21]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[22]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[23]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[24]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[25]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[26]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[27]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[28]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[29]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[30]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputA[31]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[0]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[1]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[2]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[3]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[4]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[5]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[6]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[7]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[8]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[9]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[10]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[11]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[12]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[13]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[14]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[15]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[16]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[17]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[18]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[19]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[20]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[21]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[22]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[23]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[24]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[25]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[26]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[27]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[28]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[29]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[30]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "inputB[31]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
-    Warning (15610): No output dependent on input pin "shamt[0]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 10
-    Warning (15610): No output dependent on input pin "shamt[1]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 10
-    Warning (15610): No output dependent on input pin "shamt[2]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 10
-    Warning (15610): No output dependent on input pin "shamt[3]" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 10
-Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 72 input pins
-    Info (21059): Implemented 33 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 109 warnings
-    Info: Peak virtual memory: 5028 megabytes
-    Info: Processing ended: Tue Nov 16 17:48:49 2021
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:45
+    Info (12022): Found design unit 1: alu-arch File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 17
+    Info (12023): Found entity 1: alu File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 7
+Error (10405): VHDL error at alu.vhd(39): can't determine type of object at or near identifier "shift_left" -- found 0 possible types File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 39
+Error (10411): VHDL Type Conversion error at alu.vhd(39): can't determine type of object or expression near text or symbol "std_logic_vector" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 39
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 0 warnings
+    Error: Peak virtual memory: 5015 megabytes
+    Error: Processing ended: Tue Nov 16 22:16:25 2021
+    Error: Elapsed time: 00:00:15
+    Error: Total CPU time (on all processors): 00:00:36
 
 
