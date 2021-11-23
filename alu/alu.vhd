@@ -15,6 +15,7 @@ port(
 end alu;
 
 architecture arch of alu is
+	signal res : std_logic_vector(31 downto 0);
 begin
 
 	process(aluControl, inputA, inputB, shamt)
@@ -22,38 +23,47 @@ begin
 		-- first check for every instruction type
 		case aluControl is
 			when "0000" =>	-- and
-				aluResult <= inputA and inputB;
+				res <= inputA and inputB;
 			when "0001" => -- or
-				aluResult <= inputA or inputB;
+				res <= inputA or inputB;
 			when "0010" => -- add
-				aluResult <= inputA + inputB;
+				res <= inputA + inputB;
 			when "0110" => -- sub
-				aluResult <= inputA - inputB;
+				res <= inputA - inputB;
 			when "0111" => -- slt
 				if(inputA < inputB) then
-					aluResult <= x"00000001";
+					res <= x"00000001";
 				else
-					aluResult <= x"00000000";
+					res <= x"00000000";
 				end if;
 			when "1000" => -- sll
-				aluResult <= shift_left(inputB, shamt);
+				  for i in 0 to conv_integer(shamt) loop
+					 res <= inputB(inputB'left-1 downto 0) & '0';
+				  end loop;
+				  -- res <= shift_right(inputB, shamt);
 			when "1001" => -- srl
-				aluResult <= shift_right(inputB, shamt);
+				  for i in 0 to conv_integer(shamt) loop
+					 res <= '0' & inputB(31 downto 1);
+				  end loop;			
 			when "1010" => -- sllv
-				aluResult <= shift_left(inputB, inputA);
+				  for i in 0 to conv_integer(inputA) loop
+					 res <= inputB(inputB'left-1 downto 0) & '0';
+				  end loop;			
 			when "1011" => -- srlv
-				aluResult <= shift_right(inputB, inputA);
+				  for i in 0 to conv_integer(inputA) loop
+					 res <= '0' & inputB(31 downto 1);
+				  end loop;			
 			when "1100" => -- nor
-				aluResult <= inputA nor inputB;
+				res <= inputA nor inputB;
 			when "1101" => -- lui
-				aluResult <= shift_left(inputB, 16);
+				res <= inputB & x"0000";
 			when others => -- do nothing
-				aluResult <= aluResult;
 			end case;
 	end process;
 	
-	with aluResult select
+	with res select
 	zero <= 	'1' when x"00000000",
 				'1' when others;
-
+	
+	aluResult <= res;
 end arch;
