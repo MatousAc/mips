@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Ac/Desktop/Code/VHDL/Mips Processor/sei/simulation/qsim
 vsei
-Z1 !s110 1637715268
+Z1 !s110 1637716550
 !i10b 1
 !s100 1_1RjM>6XWT=zA1>cfHkh3
 I:eiFBW2Sed>XK0:KZQ0FM2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1637715267
+w1637716548
 8sei.vo
 Fsei.vo
 L0 32
@@ -23,7 +23,7 @@ Z3 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z4 !s108 1637715268.000000
+Z4 !s108 1637716550.000000
 !s107 sei.vo|
 !s90 -work|work|sei.vo|
 !i113 1
@@ -35,7 +35,7 @@ R1
 IK<f<JIcG?OfZSa3FcRB771
 R2
 R0
-w1637715263
+w1637716544
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 30

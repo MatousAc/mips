@@ -2,28 +2,28 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:54:28 on Nov 23,2021
+# Start time: 20:15:50 on Nov 23,2021
 # vlog -work work sei.vo 
 # -- Compiling module sei
 # 
 # Top level modules:
 # 	sei
-# End time: 19:54:28 on Nov 23,2021, Elapsed time: 0:00:00
+# End time: 20:15:50 on Nov 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 19:54:28 on Nov 23,2021
+# Start time: 20:15:50 on Nov 23,2021
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module sei_vlg_vec_tst
 # 
 # Top level modules:
 # 	sei_vlg_vec_tst
-# End time: 19:54:28 on Nov 23,2021, Elapsed time: 0:00:00
+# End time: 20:15:50 on Nov 23,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.sei_vlg_vec_tst -voptargs=""+acc"" 
-# Start time: 19:54:28 on Nov 23,2021
+# Start time: 20:15:50 on Nov 23,2021
 # Loading work.sei_vlg_vec_tst
 # Loading work.sei
 # ** Note: $finish    : Waveform.vwf.vt(45)
 #    Time: 100 us  Iteration: 0  Instance: /sei_vlg_vec_tst
-# End time: 19:54:29 on Nov 23,2021, Elapsed time: 0:00:01
+# End time: 20:15:51 on Nov 23,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

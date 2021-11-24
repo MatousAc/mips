@@ -1,5 +1,5 @@
 Flow report for sei
-Tue Nov 23 19:54:27 2021
+Tue Nov 23 20:15:48 2021
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 23 19:54:27 2021       ;
+; Flow Status                     ; Successful - Tue Nov 23 20:15:48 2021       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; sei                                         ;
 ; Top-level Entity Name           ; sei                                         ;
@@ -103,7 +103,9 @@ agreement for further details.
 ; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4893 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4875 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4893 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:49     ; --                      ; --                  ; 00:01:25                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4875 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4893 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:52     ; --                      ; --                  ; 00:01:27                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -119,6 +121,8 @@ agreement for further details.
 ; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -130,6 +134,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off sei -c sei
 quartus_asm --read_settings_files=off --write_settings_files=off sei -c sei
 quartus_sta sei -c sei
 quartus_eda --read_settings_files=off --write_settings_files=off sei -c sei
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off sei -c sei --vector_source="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/sei/Waveform.vwf" --testbench_file="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/sei/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/sei/simulation/qsim/" sei -c sei
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off sei -c sei --vector_source="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/sei/Waveform.vwf" --testbench_file="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/sei/simulation/qsim/Waveform.vwf.vt"
 quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/sei/simulation/qsim/" sei -c sei
 
