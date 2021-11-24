@@ -163,36 +163,38 @@ BEGIN
 	-- ALUControl
 	
 		IF(opcode = "000000") THEN	-- R-Types
-			WITH funct SELECT ALUControl	<=	
-				"0000"	WHEN	"100000",	-- add
-				"0001"	WHEN	"100001",	-- addu
-				"0010"	WHEN	"100100",	-- and
-				"0100"	WHEN	"001000",	-- jr
-				"0111"	WHEN	"100111",	-- nor
-				"1000"	WHEN	"100101",	-- or
-				"1001"	WHEN	"101010",	-- slt
-				"1010"	WHEN	"000000",	-- sll
-				"1011"	WHEN	"000010",	-- srl
-				"1100"	WHEN	"000100",	-- sllv
-				"1101"	WHEN	"000110",	-- srlv
-				"1101"	WHEN	"100010",	-- sub
-				"1101"	WHEN	"100011",	-- subu
-				"0000"	WHEN	others;
+			case funct is
+				when "100000"=> aluControl <= "0000"		;	-- add
+				when "100001"=> aluControl <= "0001"		;	-- addu
+				when "100100"=> aluControl <= "0010"		;	-- and
+				when "001000"=> aluControl <= "0100"		;	-- jr
+				when "100111"=> aluControl <= "0111"		;	-- nor
+				when "100101"=> aluControl <= "1000"		;	-- or
+				when "101010"=> aluControl <= "1001"		;	-- slt
+				when "000000"=> aluControl <= "1010"		;	-- sll
+				when "000010"=> aluControl <= "1011"		;	-- srl
+				when "000100"=> aluControl <= "1100"		;	-- sllv
+				when "000110"=> aluControl <= "1101"		;	-- srlv
+				when "100010"=> aluControl <= "1101"		;	-- sub
+				when "100011"=> aluControl <= "1101"		;	-- subu
+				when 	others=> aluControl <= "0000"			;
+			end case;
 		ELSE	-- I and J-Types
-			WITH opcode SELECT ALUControl	<=
-				"0010"	WHEN	"001000",	-- addi
-				"0010"	WHEN	"001001",	-- addiu
-				"0000"	WHEN	"001100",	-- andi
-				"0110"	WHEN	"000100",	-- beq
-				"0110"	WHEN	"000101",	-- bne
-				"1101"	WHEN	"001111",	-- lui
-				"0010"	WHEN	"100011",	-- lw
-				"0001"	WHEN	"001101",	-- ori
-				"0111"	WHEN	"001010",	-- slti
-				"0010"	WHEN	"101011",	-- sw
-				"0000"	WHEN	"000010";	-- j
-				"0010"	WHEN	"000011",	-- jal
-				"0000"	WHEN	others;
+			case opcode is
+				when "001000"=> aluControl <= "0010"		;	-- addi
+				when "001001"=> aluControl <= "0010"		;	-- addiu
+				when "001100"=> aluControl <= "0000"		;	-- andi
+				when "000100"=> aluControl <= "0110"		;	-- beq
+				when "000101"=> aluControl <= "0110"		;	-- bne
+				when "001111"=> aluControl <= "1101"		;	-- lui
+				when "100011"=> aluControl <= "0010"		;	-- lw
+				when "001101"=> aluControl <= "0001"		;	-- ori
+				when "001010"=> aluControl <= "0111"		;	-- slti
+				when "101011"=> aluControl <= "0010"		;	-- sw
+				when "000010"=> aluControl <= "0000"		;	-- j
+				when "000011"=> aluControl <= "0010"		;	-- jal
+				when 	others=> aluControl <= "0000"			;
+			end case;
 		END IF;
 
 	END PROCESS;
