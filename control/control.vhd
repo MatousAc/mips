@@ -161,19 +161,39 @@ BEGIN
 		
 	-- ##########################################################
 	-- ALUControl
-		
-		WITH funct SELECT ALUControl	<=	
-			"0000"	WHEN	"100100",	-- AND
-			"0001"	WHEN	"100101",	-- OR
-			"0010"	WHEN	"100000",	-- Add
-			"0100"	WHEN	"100010",	-- Subtract
-			"0111"	WHEN	"101010",	-- Set on less than
-			"1000"	WHEN	"000000",	-- Shift left logical
-			"1001"	WHEN	"000010",	-- Shift right logical
-			"1010"	WHEN	"000100",	-- Shift left logical vector
-			"1011"	WHEN	"000110",	-- Shift right logical vector
-			"1100"	WHEN	"100111",	-- NOR
-			"1101"	WHEN	"000000";	-- LUI
-		
+	
+		IF(opcode = "000000") THEN	-- R-Types
+			WITH funct SELECT ALUControl	<=	
+				"0000"	WHEN	"100000",	-- add
+				"0001"	WHEN	"100001",	-- addu
+				"0010"	WHEN	"100100",	-- and
+				"0100"	WHEN	"001000",	-- jr
+				"0111"	WHEN	"100111",	-- nor
+				"1000"	WHEN	"100101",	-- or
+				"1001"	WHEN	"101010",	-- slt
+				"1010"	WHEN	"000000",	-- sll
+				"1011"	WHEN	"000010",	-- srl
+				"1100"	WHEN	"000100",	-- sllv
+				"1101"	WHEN	"000110",	-- srlv
+				"1101"	WHEN	"100010",	-- sub
+				"1101"	WHEN	"100011",	-- subu
+				"0000"	WHEN	others;
+		ELSE	-- I and J-Types
+			WITH opcode SELECT ALUControl	<=
+				"0010"	WHEN	"001000",	-- addi
+				"0010"	WHEN	"001001",	-- addiu
+				"0000"	WHEN	"001100",	-- andi
+				"0110"	WHEN	"000100",	-- beq
+				"0110"	WHEN	"000101",	-- bne
+				"1101"	WHEN	"001111",	-- lui
+				"0010"	WHEN	"100011",	-- lw
+				"0001"	WHEN	"001101",	-- ori
+				"0111"	WHEN	"001010",	-- slti
+				"0010"	WHEN	"101011",	-- sw
+				"0000"	WHEN	"000010";	-- j
+				"0010"	WHEN	"000011",	-- jal
+				"0000"	WHEN	others;
+		END IF;
+
 	END PROCESS;
 END arch;

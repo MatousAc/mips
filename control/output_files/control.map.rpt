@@ -1,5 +1,5 @@
 Analysis & Synthesis report for control
-Tue Nov 23 19:59:14 2021
+Tue Nov 23 20:38:53 2021
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Nov 23 19:59:14 2021           ;
+; Analysis & Synthesis Status ; Failed - Tue Nov 23 20:38:53 2021           ;
 ; Quartus Prime Version       ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name               ; control                                     ;
 ; Top-level Entity Name       ; control                                     ;
@@ -162,16 +162,18 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Tue Nov 23 19:58:52 2021
+    Info: Processing started: Tue Nov 23 20:38:35 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control -c control
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Error (10500): VHDL syntax error at control.vhd(165) near text "WITH";  expecting "end", or "(", or an identifier ("with" is a reserved keyword), or a sequential statement File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 165
-Error (10500): VHDL syntax error at control.vhd(166) near text "WHEN";  expecting ";" File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 166
+Error (10500): VHDL syntax error at control.vhd(167) near text "IF";  expecting "end", or "(", or an identifier ("if" is a reserved keyword), or a concurrent statement File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 167
+Error (10500): VHDL syntax error at control.vhd(167) near text "THEN";  expecting "<=" File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 167
+Error (10500): VHDL syntax error at control.vhd(183) near text "ELSE";  expecting "end", or "(", or an identifier ("else" is a reserved keyword), or a concurrent statement File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 183
+Error (10500): VHDL syntax error at control.vhd(196) near text "WHEN";  expecting "(", or "'", or "." File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 196
 Info (12021): Found 0 design units, including 0 entities, in source file control.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 0 warnings
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 0 warnings
     Error: Peak virtual memory: 5005 megabytes
-    Error: Processing ended: Tue Nov 23 19:59:14 2021
-    Error: Elapsed time: 00:00:22
-    Error: Total CPU time (on all processors): 00:00:55
+    Error: Processing ended: Tue Nov 23 20:38:53 2021
+    Error: Elapsed time: 00:00:18
+    Error: Total CPU time (on all processors): 00:00:45
 
 
