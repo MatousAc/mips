@@ -1,0 +1,242 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/23/2021 19:54:23"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          sei
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module sei_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [15:0] sixteen;
+// wires                                               
+wire [31:0] thirtytwo;
+
+// assign statements (if any)                          
+sei i1 (
+// port map - connection between master ports and signals/registers   
+	.sixteen(sixteen),
+	.thirtytwo(thirtytwo)
+);
+initial 
+begin 
+#100000000 $finish;
+end 
+// sixteen[ 15 ]
+initial
+begin
+	sixteen[15] = 1'b0;
+	sixteen[15] = #17920000 1'b1;
+	sixteen[15] = #7680000 1'b0;
+	sixteen[15] = #12800000 1'b1;
+	sixteen[15] = #15360000 1'b0;
+	sixteen[15] = #15360000 1'b1;
+	sixteen[15] = #7680000 1'b0;
+	sixteen[15] = #15360000 1'b1;
+	sixteen[15] = #7680000 1'b0;
+end 
+// sixteen[ 14 ]
+initial
+begin
+	sixteen[14] = 1'b0;
+	sixteen[14] = #38400000 1'b1;
+	sixteen[14] = #7680000 1'b0;
+	sixteen[14] = #7680000 1'b1;
+	sixteen[14] = #7680000 1'b0;
+	sixteen[14] = #23040000 1'b1;
+	sixteen[14] = #15360000 1'b0;
+end 
+// sixteen[ 13 ]
+initial
+begin
+	sixteen[13] = 1'b0;
+	sixteen[13] = #17920000 1'b1;
+	sixteen[13] = #7680000 1'b0;
+	sixteen[13] = #5120000 1'b1;
+	sixteen[13] = #15360000 1'b0;
+	sixteen[13] = #30720000 1'b1;
+	sixteen[13] = #23040000 1'b0;
+end 
+// sixteen[ 12 ]
+initial
+begin
+	sixteen[12] = 1'b0;
+	sixteen[12] = #30720000 1'b1;
+	sixteen[12] = #15360000 1'b0;
+	sixteen[12] = #30720000 1'b1;
+	sixteen[12] = #23040000 1'b0;
+end 
+// sixteen[ 11 ]
+initial
+begin
+	sixteen[11] = 1'b0;
+	sixteen[11] = #17920000 1'b1;
+	sixteen[11] = #7680000 1'b0;
+	sixteen[11] = #12800000 1'b1;
+	sixteen[11] = #7680000 1'b0;
+	sixteen[11] = #23040000 1'b1;
+	sixteen[11] = #15360000 1'b0;
+	sixteen[11] = #7680000 1'b1;
+	sixteen[11] = #7680000 1'b0;
+end 
+// sixteen[ 10 ]
+initial
+begin
+	sixteen[10] = 1'b0;
+	sixteen[10] = #38400000 1'b1;
+	sixteen[10] = #7680000 1'b0;
+	sixteen[10] = #23040000 1'b1;
+	sixteen[10] = #30720000 1'b0;
+end 
+// sixteen[ 9 ]
+initial
+begin
+	sixteen[9] = 1'b0;
+	sixteen[9] = #17920000 1'b1;
+	sixteen[9] = #7680000 1'b0;
+	sixteen[9] = #5120000 1'b1;
+	sixteen[9] = #15360000 1'b0;
+	sixteen[9] = #23040000 1'b1;
+	sixteen[9] = #30720000 1'b0;
+end 
+// sixteen[ 8 ]
+initial
+begin
+	sixteen[8] = 1'b0;
+	sixteen[8] = #38400000 1'b1;
+	sixteen[8] = #7680000 1'b0;
+	sixteen[8] = #7680000 1'b1;
+	sixteen[8] = #7680000 1'b0;
+	sixteen[8] = #7680000 1'b1;
+	sixteen[8] = #7680000 1'b0;
+	sixteen[8] = #7680000 1'b1;
+	sixteen[8] = #15360000 1'b0;
+end 
+// sixteen[ 7 ]
+initial
+begin
+	sixteen[7] = 1'b0;
+	sixteen[7] = #38400000 1'b1;
+	sixteen[7] = #7680000 1'b0;
+	sixteen[7] = #7680000 1'b1;
+	sixteen[7] = #23040000 1'b0;
+	sixteen[7] = #15360000 1'b1;
+	sixteen[7] = #7680000 1'b0;
+end 
+// sixteen[ 6 ]
+initial
+begin
+	sixteen[6] = 1'b0;
+	sixteen[6] = #38400000 1'b1;
+	sixteen[6] = #7680000 1'b0;
+	sixteen[6] = #7680000 1'b1;
+	sixteen[6] = #7680000 1'b0;
+	sixteen[6] = #7680000 1'b1;
+	sixteen[6] = #7680000 1'b0;
+	sixteen[6] = #7680000 1'b1;
+	sixteen[6] = #15360000 1'b0;
+end 
+// sixteen[ 5 ]
+initial
+begin
+	sixteen[5] = 1'b0;
+	sixteen[5] = #17920000 1'b1;
+	sixteen[5] = #7680000 1'b0;
+	sixteen[5] = #12800000 1'b1;
+	sixteen[5] = #7680000 1'b0;
+	sixteen[5] = #7680000 1'b1;
+	sixteen[5] = #7680000 1'b0;
+	sixteen[5] = #7680000 1'b1;
+	sixteen[5] = #30720000 1'b0;
+end 
+// sixteen[ 4 ]
+initial
+begin
+	sixteen[4] = 1'b0;
+	sixteen[4] = #5120000 1'b1;
+	sixteen[4] = #10240000 1'b0;
+	sixteen[4] = #23040000 1'b1;
+	sixteen[4] = #7680000 1'b0;
+	sixteen[4] = #7680000 1'b1;
+	sixteen[4] = #7680000 1'b0;
+	sixteen[4] = #15360000 1'b1;
+	sixteen[4] = #23040000 1'b0;
+end 
+// sixteen[ 3 ]
+initial
+begin
+	sixteen[3] = 1'b0;
+	sixteen[3] = #38400000 1'b1;
+	sixteen[3] = #7680000 1'b0;
+	sixteen[3] = #7680000 1'b1;
+	sixteen[3] = #7680000 1'b0;
+	sixteen[3] = #7680000 1'b1;
+	sixteen[3] = #7680000 1'b0;
+	sixteen[3] = #15360000 1'b1;
+	sixteen[3] = #7680000 1'b0;
+end 
+// sixteen[ 2 ]
+initial
+begin
+	sixteen[2] = 1'b0;
+	sixteen[2] = #38400000 1'b1;
+	sixteen[2] = #7680000 1'b0;
+	sixteen[2] = #7680000 1'b1;
+	sixteen[2] = #7680000 1'b0;
+	sixteen[2] = #7680000 1'b1;
+	sixteen[2] = #7680000 1'b0;
+	sixteen[2] = #7680000 1'b1;
+	sixteen[2] = #15360000 1'b0;
+end 
+// sixteen[ 1 ]
+initial
+begin
+	sixteen[1] = 1'b0;
+	sixteen[1] = #17920000 1'b1;
+	sixteen[1] = #7680000 1'b0;
+	sixteen[1] = #12800000 1'b1;
+	sixteen[1] = #7680000 1'b0;
+	sixteen[1] = #15360000 1'b1;
+	sixteen[1] = #7680000 1'b0;
+	sixteen[1] = #15360000 1'b1;
+	sixteen[1] = #15360000 1'b0;
+end 
+// sixteen[ 0 ]
+initial
+begin
+	sixteen[0] = 1'b0;
+	sixteen[0] = #5120000 1'b1;
+	sixteen[0] = #10240000 1'b0;
+	sixteen[0] = #2560000 1'b1;
+	sixteen[0] = #7680000 1'b0;
+	sixteen[0] = #5120000 1'b1;
+	sixteen[0] = #7680000 1'b0;
+	sixteen[0] = #7680000 1'b1;
+	sixteen[0] = #7680000 1'b0;
+	sixteen[0] = #30720000 1'b1;
+	sixteen[0] = #15360000 1'b0;
+end 
+endmodule
+

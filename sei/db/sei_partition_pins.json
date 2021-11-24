@@ -1,0 +1,201 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "thirtytwo[0]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[1]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[2]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[3]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[4]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[5]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[6]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[7]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[8]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[9]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[10]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[11]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[12]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[13]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[14]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[15]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[16]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[17]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[18]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[19]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[20]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[21]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[22]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[23]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[24]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[25]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[26]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[27]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[28]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[29]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[30]",
+					"strict" : false
+				},
+				{
+					"name" : "thirtytwo[31]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sixteen[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
