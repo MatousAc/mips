@@ -41,9 +41,11 @@ BEGIN
 			END IF;
 		
 	-- #############################################################
-	-- Both J-Type
+	-- Both J-Type Instructions
 	
 		ELSIF(opcode = "000010") THEN -- j
+			RegDst	<= '0';
+			ALUsrc	<= '0';
 			Jump		<= '1';
 			Jal		<= '0';
 			Jr			<= '0';
@@ -52,8 +54,11 @@ BEGIN
 			MemRead	<= '0';
 			MemWrite	<= '0';
 			RegWrite	<= '0';
+			MemtoReg	<= '0';
 		
 		ELSIF(opcode = "000011") THEN -- jal
+			RegDst	<= '0';
+			ALUsrc	<= '0';
 			Jump		<= '0';
 			Jal		<= '1';
 			Jr			<= '0';
@@ -67,7 +72,7 @@ BEGIN
 	
 		
 	-- #############################################################
-	-- All I-Type
+	-- All I-Type Instructions
 		
 		ELSE
 			RegDst	<= '0';
@@ -154,8 +159,14 @@ BEGIN
 					MemWrite	<= '1';
 					RegWrite	<= '0';
 					MemtoReg	<= '0';
-			ELSE
-				RegDst <= '0';
+			ELSE -- Base case shouldn't happen 
+					ALUsrc	<= '0';
+					Beq		<= '0';
+					Bne		<= '0';
+					MemRead	<= '0';
+					MemWrite	<= '0';
+					RegWrite	<= '0';
+					MemtoReg	<= '0';
 			END IF;
 		END IF;
 		
@@ -164,38 +175,38 @@ BEGIN
 	
 		IF(opcode = "000000") THEN	-- R-Types
 			case funct is
-				when "100000"=> aluControl <= "0000"		;	-- add
-				when "100001"=> aluControl <= "0001"		;	-- addu
-				when "100100"=> aluControl <= "0010"		;	-- and
-				when "001000"=> aluControl <= "0100"		;	-- jr
-				when "100111"=> aluControl <= "0111"		;	-- nor
-				when "100101"=> aluControl <= "1000"		;	-- or
-				when "101010"=> aluControl <= "1001"		;	-- slt
-				when "000000"=> aluControl <= "1010"		;	-- sll
-				when "000010"=> aluControl <= "1011"		;	-- srl
-				when "000100"=> aluControl <= "1100"		;	-- sllv
-				when "000110"=> aluControl <= "1101"		;	-- srlv
-				when "100010"=> aluControl <= "1101"		;	-- sub
-				when "100011"=> aluControl <= "1101"		;	-- subu
-				when 	others=> aluControl <= "0000"			;
+				when "100000" => aluControl <= "0010"		;	-- add
+				when "100001" => aluControl <= "0010"		;	-- addu
+				when "100100" => aluControl <= "0000"		;	-- and
+				when "001000" => aluControl <= "0000"		;	-- jr (d)
+				when "100111" => aluControl <= "1100"		;	-- nor
+				when "100101" => aluControl <= "0001"		;	-- or
+				when "101010" => aluControl <= "0111"		;	-- slt
+				when "000000" => aluControl <= "1000"		;	-- sll
+				when "000010" => aluControl <= "1001"		;	-- srl
+				when "000100" => aluControl <= "1010"		;	-- sllv
+				when "000110" => aluControl <= "1011"		;	-- srlv
+				when "100010" => aluControl <= "0110"		;	-- sub
+				when "100011" => aluControl <= "0110"		;	-- subu
+				when 	others  => aluControl <= "0000"		;	-- ###Error case###
 			end case;
 		ELSE	-- I and J-Types
 			case opcode is
-				when "001000"=> aluControl <= "0010"		;	-- addi
-				when "001001"=> aluControl <= "0010"		;	-- addiu
-				when "001100"=> aluControl <= "0000"		;	-- andi
-				when "000100"=> aluControl <= "0110"		;	-- beq
-				when "000101"=> aluControl <= "0110"		;	-- bne
-				when "001111"=> aluControl <= "1101"		;	-- lui
-				when "100011"=> aluControl <= "0010"		;	-- lw
-				when "001101"=> aluControl <= "0001"		;	-- ori
-				when "001010"=> aluControl <= "0111"		;	-- slti
-				when "101011"=> aluControl <= "0010"		;	-- sw
-				when "000010"=> aluControl <= "0000"		;	-- j
-				when "000011"=> aluControl <= "0010"		;	-- jal
-				when 	others=> aluControl <= "0000"			;
+				when "001000" => aluControl <= "0010"		;	-- addi
+				when "001001" => aluControl <= "0010"		;	-- addiu
+				when "001100" => aluControl <= "0000"		;	-- andi
+				when "000100" => aluControl <= "0110"		;	-- beq
+				when "000101" => aluControl <= "0110"		;	-- bne
+				when "001111" => aluControl <= "1101"		;	-- lui
+				when "100011" => aluControl <= "0010"		;	-- lw
+				when "001101" => aluControl <= "0001"		;	-- ori
+				when "001010" => aluControl <= "0111"		;	-- slti
+				when "101011" => aluControl <= "0010"		;	-- sw
+				when "000010" => aluControl <= "0000"		;	-- j (d)
+				when "000011" => aluControl <= "0010"		;	-- jal
+				when 	others  => aluControl <= "0000"		;	-- ###Error case###
 			end case;
 		END IF;
-
+		
 	END PROCESS;
 END arch;
