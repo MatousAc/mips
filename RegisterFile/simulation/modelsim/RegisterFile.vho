@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
 
--- DATE "11/16/2021 17:27:22"
+-- DATE "11/30/2021 16:53:45"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -45,8 +45,8 @@ ENTITY 	RegisterFile IS
 	read_reg2 : IN std_logic_vector(4 DOWNTO 0);
 	write_reg : IN std_logic_vector(4 DOWNTO 0);
 	write_data : IN std_logic_vector(31 DOWNTO 0);
-	read_data1 : OUT std_logic_vector(31 DOWNTO 0);
-	read_data2 : OUT std_logic_vector(31 DOWNTO 0)
+	read_data1 : BUFFER std_logic_vector(31 DOWNTO 0);
+	read_data2 : BUFFER std_logic_vector(31 DOWNTO 0)
 	);
 END RegisterFile;
 

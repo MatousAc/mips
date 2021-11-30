@@ -1,0 +1,477 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/30/2021 17:31:01"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          RegisterFile
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module RegisterFile_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg [4:0] read_reg1;
+reg [4:0] read_reg2;
+reg RegWrite;
+reg resetn;
+reg [31:0] write_data;
+reg [4:0] write_reg;
+// wires                                               
+wire [31:0] read_data1;
+wire [31:0] read_data2;
+
+// assign statements (if any)                          
+RegisterFile i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.read_data1(read_data1),
+	.read_data2(read_data2),
+	.read_reg1(read_reg1),
+	.read_reg2(read_reg2),
+	.RegWrite(RegWrite),
+	.resetn(resetn),
+	.write_data(write_data),
+	.write_reg(write_reg)
+);
+initial 
+begin 
+#46000000 $finish;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #1000000 1'b1;
+	#1000000;
+end 
+
+// resetn
+initial
+begin
+	resetn = 1'b1;
+	resetn = #28800000 1'b0;
+	resetn = #3200000 1'b1;
+end 
+
+// RegWrite
+initial
+begin
+	RegWrite = 1'b0;
+	RegWrite = #640000 1'b1;
+	RegWrite = #3840000 1'b0;
+	RegWrite = #1280000 1'b1;
+	RegWrite = #3200000 1'b0;
+	RegWrite = #7680000 1'b1;
+	RegWrite = #1920000 1'b0;
+end 
+// read_reg1[ 4 ]
+initial
+begin
+	read_reg1[4] = 1'b0;
+	read_reg1[4] = #23680000 1'b1;
+	read_reg1[4] = #3840000 1'b0;
+end 
+// read_reg1[ 3 ]
+initial
+begin
+	read_reg1[3] = 1'b0;
+	read_reg1[3] = #12160000 1'b1;
+	read_reg1[3] = #3840000 1'b0;
+	read_reg1[3] = #3840000 1'b1;
+	read_reg1[3] = #3200000 1'b0;
+	read_reg1[3] = #9600000 1'b1;
+	read_reg1[3] = #2560000 1'b0;
+end 
+// read_reg1[ 2 ]
+initial
+begin
+	read_reg1[2] = 1'b0;
+end 
+// read_reg1[ 1 ]
+initial
+begin
+	read_reg1[1] = 1'b0;
+end 
+// read_reg1[ 0 ]
+initial
+begin
+	read_reg1[0] = 1'b0;
+end 
+// read_reg2[ 4 ]
+initial
+begin
+	read_reg2[4] = 1'b0;
+	read_reg2[4] = #24320000 1'b1;
+	read_reg2[4] = #2560000 1'b0;
+end 
+// read_reg2[ 3 ]
+initial
+begin
+	read_reg2[3] = 1'b0;
+	read_reg2[3] = #12160000 1'b1;
+	read_reg2[3] = #3200000 1'b0;
+	read_reg2[3] = #4480000 1'b1;
+	read_reg2[3] = #3200000 1'b0;
+	read_reg2[3] = #9600000 1'b1;
+	read_reg2[3] = #2560000 1'b0;
+end 
+// read_reg2[ 2 ]
+initial
+begin
+	read_reg2[2] = 1'b0;
+end 
+// read_reg2[ 1 ]
+initial
+begin
+	read_reg2[1] = 1'b0;
+end 
+// read_reg2[ 0 ]
+initial
+begin
+	read_reg2[0] = 1'b0;
+	read_reg2[0] = #12160000 1'b1;
+	read_reg2[0] = #3200000 1'b0;
+	read_reg2[0] = #4480000 1'b1;
+	read_reg2[0] = #3200000 1'b0;
+	read_reg2[0] = #1280000 1'b1;
+	read_reg2[0] = #2560000 1'b0;
+	read_reg2[0] = #5760000 1'b1;
+	read_reg2[0] = #2560000 1'b0;
+end 
+// write_reg[ 4 ]
+initial
+begin
+	write_reg[4] = 1'b0;
+end 
+// write_reg[ 3 ]
+initial
+begin
+	write_reg[3] = 1'b0;
+	write_reg[3] = #1280000 1'b1;
+	write_reg[3] = #3200000 1'b0;
+	write_reg[3] = #1280000 1'b1;
+	write_reg[3] = #2560000 1'b0;
+	write_reg[3] = #7680000 1'b1;
+	write_reg[3] = #2560000 1'b0;
+end 
+// write_reg[ 2 ]
+initial
+begin
+	write_reg[2] = 1'b0;
+end 
+// write_reg[ 1 ]
+initial
+begin
+	write_reg[1] = 1'b0;
+end 
+// write_reg[ 0 ]
+initial
+begin
+	write_reg[0] = 1'b0;
+	write_reg[0] = #5760000 1'b1;
+	write_reg[0] = #2560000 1'b0;
+end 
+// write_data[ 31 ]
+initial
+begin
+	write_data[31] = 1'b0;
+	write_data[31] = #1280000 1'b1;
+	write_data[31] = #3200000 1'b0;
+	write_data[31] = #1280000 1'b1;
+	write_data[31] = #2560000 1'b0;
+end 
+// write_data[ 30 ]
+initial
+begin
+	write_data[30] = 1'b0;
+	write_data[30] = #1280000 1'b1;
+	write_data[30] = #3200000 1'b0;
+	write_data[30] = #1280000 1'b1;
+	write_data[30] = #2560000 1'b0;
+end 
+// write_data[ 29 ]
+initial
+begin
+	write_data[29] = 1'b0;
+	write_data[29] = #5760000 1'b1;
+	write_data[29] = #2560000 1'b0;
+end 
+// write_data[ 28 ]
+initial
+begin
+	write_data[28] = 1'b0;
+	write_data[28] = #1280000 1'b1;
+	write_data[28] = #3200000 1'b0;
+	write_data[28] = #1280000 1'b1;
+	write_data[28] = #2560000 1'b0;
+	write_data[28] = #7680000 1'b1;
+	write_data[28] = #2560000 1'b0;
+end 
+// write_data[ 27 ]
+initial
+begin
+	write_data[27] = 1'b0;
+	write_data[27] = #1280000 1'b1;
+	write_data[27] = #3200000 1'b0;
+	write_data[27] = #1280000 1'b1;
+	write_data[27] = #2560000 1'b0;
+end 
+// write_data[ 26 ]
+initial
+begin
+	write_data[26] = 1'b0;
+	write_data[26] = #1280000 1'b1;
+	write_data[26] = #3200000 1'b0;
+	write_data[26] = #1280000 1'b1;
+	write_data[26] = #2560000 1'b0;
+end 
+// write_data[ 25 ]
+initial
+begin
+	write_data[25] = 1'b0;
+	write_data[25] = #1280000 1'b1;
+	write_data[25] = #3200000 1'b0;
+	write_data[25] = #1280000 1'b1;
+	write_data[25] = #2560000 1'b0;
+	write_data[25] = #7680000 1'b1;
+	write_data[25] = #2560000 1'b0;
+end 
+// write_data[ 24 ]
+initial
+begin
+	write_data[24] = 1'b0;
+end 
+// write_data[ 23 ]
+initial
+begin
+	write_data[23] = 1'b0;
+	write_data[23] = #1280000 1'b1;
+	write_data[23] = #3200000 1'b0;
+	write_data[23] = #1280000 1'b1;
+	write_data[23] = #2560000 1'b0;
+end 
+// write_data[ 22 ]
+initial
+begin
+	write_data[22] = 1'b0;
+end 
+// write_data[ 21 ]
+initial
+begin
+	write_data[21] = 1'b0;
+	write_data[21] = #1280000 1'b1;
+	write_data[21] = #3200000 1'b0;
+	write_data[21] = #1280000 1'b1;
+	write_data[21] = #2560000 1'b0;
+	write_data[21] = #7680000 1'b1;
+	write_data[21] = #2560000 1'b0;
+end 
+// write_data[ 20 ]
+initial
+begin
+	write_data[20] = 1'b0;
+	write_data[20] = #16000000 1'b1;
+	write_data[20] = #2560000 1'b0;
+end 
+// write_data[ 19 ]
+initial
+begin
+	write_data[19] = 1'b0;
+	write_data[19] = #1280000 1'b1;
+	write_data[19] = #3200000 1'b0;
+	write_data[19] = #1280000 1'b1;
+	write_data[19] = #2560000 1'b0;
+end 
+// write_data[ 18 ]
+initial
+begin
+	write_data[18] = 1'b0;
+	write_data[18] = #1280000 1'b1;
+	write_data[18] = #3200000 1'b0;
+	write_data[18] = #1280000 1'b1;
+	write_data[18] = #2560000 1'b0;
+	write_data[18] = #7680000 1'b1;
+	write_data[18] = #2560000 1'b0;
+end 
+// write_data[ 17 ]
+initial
+begin
+	write_data[17] = 1'b0;
+end 
+// write_data[ 16 ]
+initial
+begin
+	write_data[16] = 1'b0;
+	write_data[16] = #1280000 1'b1;
+	write_data[16] = #3200000 1'b0;
+	write_data[16] = #1280000 1'b1;
+	write_data[16] = #2560000 1'b0;
+end 
+// write_data[ 15 ]
+initial
+begin
+	write_data[15] = 1'b0;
+	write_data[15] = #1280000 1'b1;
+	write_data[15] = #3200000 1'b0;
+	write_data[15] = #1280000 1'b1;
+	write_data[15] = #2560000 1'b0;
+end 
+// write_data[ 14 ]
+initial
+begin
+	write_data[14] = 1'b0;
+	write_data[14] = #16000000 1'b1;
+	write_data[14] = #2560000 1'b0;
+end 
+// write_data[ 13 ]
+initial
+begin
+	write_data[13] = 1'b0;
+	write_data[13] = #1280000 1'b1;
+	write_data[13] = #3200000 1'b0;
+	write_data[13] = #1280000 1'b1;
+	write_data[13] = #2560000 1'b0;
+end 
+// write_data[ 12 ]
+initial
+begin
+	write_data[12] = 1'b0;
+	write_data[12] = #1280000 1'b1;
+	write_data[12] = #3200000 1'b0;
+	write_data[12] = #1280000 1'b1;
+	write_data[12] = #2560000 1'b0;
+	write_data[12] = #7680000 1'b1;
+	write_data[12] = #2560000 1'b0;
+end 
+// write_data[ 11 ]
+initial
+begin
+	write_data[11] = 1'b0;
+	write_data[11] = #1280000 1'b1;
+	write_data[11] = #3200000 1'b0;
+	write_data[11] = #1280000 1'b1;
+	write_data[11] = #2560000 1'b0;
+end 
+// write_data[ 10 ]
+initial
+begin
+	write_data[10] = 1'b0;
+	write_data[10] = #1280000 1'b1;
+	write_data[10] = #3200000 1'b0;
+	write_data[10] = #1280000 1'b1;
+	write_data[10] = #2560000 1'b0;
+	write_data[10] = #7680000 1'b1;
+	write_data[10] = #2560000 1'b0;
+end 
+// write_data[ 9 ]
+initial
+begin
+	write_data[9] = 1'b0;
+	write_data[9] = #1280000 1'b1;
+	write_data[9] = #3200000 1'b0;
+	write_data[9] = #1280000 1'b1;
+	write_data[9] = #2560000 1'b0;
+	write_data[9] = #7680000 1'b1;
+	write_data[9] = #2560000 1'b0;
+end 
+// write_data[ 8 ]
+initial
+begin
+	write_data[8] = 1'b0;
+end 
+// write_data[ 7 ]
+initial
+begin
+	write_data[7] = 1'b0;
+	write_data[7] = #1280000 1'b1;
+	write_data[7] = #3200000 1'b0;
+	write_data[7] = #1280000 1'b1;
+	write_data[7] = #2560000 1'b0;
+end 
+// write_data[ 6 ]
+initial
+begin
+	write_data[6] = 1'b0;
+	write_data[6] = #1280000 1'b1;
+	write_data[6] = #3200000 1'b0;
+	write_data[6] = #11520000 1'b1;
+	write_data[6] = #2560000 1'b0;
+end 
+// write_data[ 5 ]
+initial
+begin
+	write_data[5] = 1'b0;
+	write_data[5] = #1280000 1'b1;
+	write_data[5] = #3200000 1'b0;
+	write_data[5] = #1280000 1'b1;
+	write_data[5] = #2560000 1'b0;
+	write_data[5] = #7680000 1'b1;
+	write_data[5] = #2560000 1'b0;
+end 
+// write_data[ 4 ]
+initial
+begin
+	write_data[4] = 1'b0;
+	write_data[4] = #16000000 1'b1;
+	write_data[4] = #2560000 1'b0;
+end 
+// write_data[ 3 ]
+initial
+begin
+	write_data[3] = 1'b0;
+	write_data[3] = #1280000 1'b1;
+	write_data[3] = #3200000 1'b0;
+	write_data[3] = #1280000 1'b1;
+	write_data[3] = #2560000 1'b0;
+	write_data[3] = #7680000 1'b1;
+	write_data[3] = #2560000 1'b0;
+end 
+// write_data[ 2 ]
+initial
+begin
+	write_data[2] = 1'b0;
+	write_data[2] = #1280000 1'b1;
+	write_data[2] = #3200000 1'b0;
+	write_data[2] = #1280000 1'b1;
+	write_data[2] = #2560000 1'b0;
+end 
+// write_data[ 1 ]
+initial
+begin
+	write_data[1] = 1'b0;
+	write_data[1] = #1280000 1'b1;
+	write_data[1] = #3200000 1'b0;
+end 
+// write_data[ 0 ]
+initial
+begin
+	write_data[0] = 1'b0;
+	write_data[0] = #1280000 1'b1;
+	write_data[0] = #3200000 1'b0;
+	write_data[0] = #1280000 1'b1;
+	write_data[0] = #2560000 1'b0;
+end 
+endmodule
+

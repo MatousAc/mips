@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Ac/Desktop/Code/VHDL/Mips Processor/RegisterFile/simulation/qsim
+vRegisterFile
+Z1 !s110 1638311468
+!i10b 1
+!s100 a>J2?5]@Y=`gkU;WTR]Ek2
+IF45N[[zlZ`RPz06?ZDcz22
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1638311466
+8RegisterFile.vo
+FRegisterFile.vo
+L0 32
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1638311468.000000
+!s107 RegisterFile.vo|
+!s90 -work|work|RegisterFile.vo|
+!i113 1
+Z5 o-work work
+n@register@file
+vRegisterFile_vlg_vec_tst
+R1
+!i10b 1
+!s100 ;JcWh_RZ4b>jCkcd@n3Qd0
+I:dB799k76mG?Y:^W;>eFh1
+R2
+R0
+w1638311461
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+n@register@file_vlg_vec_tst
