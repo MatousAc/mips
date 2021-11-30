@@ -9,42 +9,42 @@ z2
 cModel Technology
 Z0 dC:/Users/jonat/Desktop/mips/control/simulation/qsim
 vcontrol
-!s110 1638311624
+Z1 !s110 1638315047
 !i10b 1
-!s100 @beDQR4PnFcdEC7JX:5lb2
-IX>hO>AQTXgj>Vnk?NoH7^3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 JX9V6CGbaeZlJbbTHaRnK3
+ITdb<e:dlWh0BNn6^b1>3o1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1638311623
+w1638315046
 8control.vo
 Fcontrol.vo
 L0 32
-Z2 OV;L;10.4b;61
+Z3 OV;L;10.4b;61
 r1
 !s85 0
 31
-!s108 1638311624.000000
+Z4 !s108 1638315047.000000
 !s107 control.vo|
 !s90 -work|work|control.vo|
 !i113 1
-Z3 o-work work
+Z5 o-work work
 vcontrol_vlg_vec_tst
-!s110 1638311625
+R1
 !i10b 1
 !s100 M:AjaSP63kX4RIR[2J^l@1
 IY:TD[mSC8KnU14Ka?TN?53
-R1
+R2
 R0
-w1638311619
+w1638315041
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 30
-R2
+R3
 r1
 !s85 0
 31
-!s108 1638311625.000000
+R4
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
-R3
+R5
