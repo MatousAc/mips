@@ -1,5 +1,5 @@
 Analysis & Synthesis report for control
-Tue Nov 23 20:58:57 2021
+Tue Nov 23 21:05:19 2021
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 23 20:58:57 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 23 21:05:19 2021       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; control                                     ;
 ; Top-level Entity Name           ; control                                     ;
@@ -170,13 +170,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
-; control.vhd                      ; yes             ; User VHDL File  ; C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+; control.vhd                      ; yes             ; User VHDL File  ; C:/Users/jonat/Desktop/mips/control/control.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -282,7 +282,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -292,41 +292,41 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Tue Nov 23 20:58:42 2021
+    Info: Processing started: Tue Nov 23 21:04:55 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off control -c control
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
-    Info (12022): Found design unit 1: control-arch File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 16
-    Info (12023): Found entity 1: control File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 4
+    Info (12022): Found design unit 1: control-arch File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 16
+    Info (12023): Found entity 1: control File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 4
 Info (12127): Elaborating entity "control" for the top level hierarchy
-Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "RegDst", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "ALUsrc", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "Beq", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "Bne", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "MemRead", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "MemWrite", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "MemtoReg", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "RegWrite", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Info (10041): Inferred latch for "RegWrite" at control.vhd(19) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Info (10041): Inferred latch for "MemtoReg" at control.vhd(19) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Info (10041): Inferred latch for "MemWrite" at control.vhd(19) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Info (10041): Inferred latch for "MemRead" at control.vhd(19) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Info (10041): Inferred latch for "Bne" at control.vhd(19) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Info (10041): Inferred latch for "Beq" at control.vhd(19) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Info (10041): Inferred latch for "ALUsrc" at control.vhd(19) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Info (10041): Inferred latch for "RegDst" at control.vhd(19) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-Warning (13012): Latch RegDst$latch has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal opcode[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 6
-Warning (13012): Latch ALUsrc$latch has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal opcode[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 6
-Warning (13012): Latch RegWrite$latch has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 6
-Warning (13012): Latch MemtoReg$latch has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 19
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 6
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal opcode[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 6
+Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "RegDst", which holds its previous value in one or more paths through the process File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "ALUsrc", which holds its previous value in one or more paths through the process File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "Beq", which holds its previous value in one or more paths through the process File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "Bne", which holds its previous value in one or more paths through the process File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "MemRead", which holds its previous value in one or more paths through the process File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "MemWrite", which holds its previous value in one or more paths through the process File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "MemtoReg", which holds its previous value in one or more paths through the process File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at control.vhd(19): inferring latch(es) for signal or variable "RegWrite", which holds its previous value in one or more paths through the process File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Info (10041): Inferred latch for "RegWrite" at control.vhd(19) File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Info (10041): Inferred latch for "MemtoReg" at control.vhd(19) File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Info (10041): Inferred latch for "MemWrite" at control.vhd(19) File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Info (10041): Inferred latch for "MemRead" at control.vhd(19) File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Info (10041): Inferred latch for "Bne" at control.vhd(19) File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Info (10041): Inferred latch for "Beq" at control.vhd(19) File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Info (10041): Inferred latch for "ALUsrc" at control.vhd(19) File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Info (10041): Inferred latch for "RegDst" at control.vhd(19) File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+Warning (13012): Latch RegDst$latch has unsafe behavior File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal opcode[0] File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 6
+Warning (13012): Latch ALUsrc$latch has unsafe behavior File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal opcode[0] File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 6
+Warning (13012): Latch RegWrite$latch has unsafe behavior File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[0] File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 6
+Warning (13012): Latch MemtoReg$latch has unsafe behavior File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal opcode[0] File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 6
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal opcode[0] File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 6
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Beq" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 10
-    Warning (13410): Pin "Bne" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd Line: 10
+    Warning (13410): Pin "Beq" is stuck at GND File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 10
+    Warning (13410): Pin "Bne" is stuck at GND File: C:/Users/jonat/Desktop/mips/control/control.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -335,9 +335,9 @@ Info (21057): Implemented 61 device resources after synthesis - the final resour
     Info (21059): Implemented 15 output pins
     Info (21061): Implemented 34 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 5020 megabytes
-    Info: Processing ended: Tue Nov 23 20:58:57 2021
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 5016 megabytes
+    Info: Processing ended: Tue Nov 23 21:05:19 2021
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:47
 
 

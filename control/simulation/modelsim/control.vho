@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
 
--- DATE "11/23/2021 20:59:49"
+-- DATE "11/23/2021 21:07:16"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -38,18 +38,18 @@ ENTITY 	control IS
     PORT (
 	opcode : IN std_logic_vector(5 DOWNTO 0);
 	funct : IN std_logic_vector(5 DOWNTO 0);
-	RegDst : OUT std_logic;
-	ALUsrc : OUT std_logic;
-	Jump : OUT std_logic;
-	Jal : OUT std_logic;
-	Jr : OUT std_logic;
-	Beq : OUT std_logic;
-	Bne : OUT std_logic;
-	MemRead : OUT std_logic;
-	MemWrite : OUT std_logic;
-	RegWrite : OUT std_logic;
-	MemtoReg : OUT std_logic;
-	ALUControl : OUT std_logic_vector(3 DOWNTO 0)
+	RegDst : BUFFER std_logic;
+	ALUsrc : BUFFER std_logic;
+	Jump : BUFFER std_logic;
+	Jal : BUFFER std_logic;
+	Jr : BUFFER std_logic;
+	Beq : BUFFER std_logic;
+	Bne : BUFFER std_logic;
+	MemRead : BUFFER std_logic;
+	MemWrite : BUFFER std_logic;
+	RegWrite : BUFFER std_logic;
+	MemtoReg : BUFFER std_logic;
+	ALUControl : BUFFER std_logic_vector(3 DOWNTO 0)
 	);
 END control;
 
