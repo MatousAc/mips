@@ -185,7 +185,7 @@ begin
 	
 	with res select
 	zero <= 	'1' when x"00000000",
-				'1' when others;
+				'0' when others;
 	
 	aluResult <= res;
 end arch;

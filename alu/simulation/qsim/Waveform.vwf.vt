@@ -1,0 +1,809 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/30/2021 21:52:25"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          alu
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module alu_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [3:0] aluControl;
+reg [31:0] inputA;
+reg [31:0] inputB;
+reg [4:0] shamt;
+// wires                                               
+wire [31:0] aluResult;
+wire zero;
+
+// assign statements (if any)                          
+alu i1 (
+// port map - connection between master ports and signals/registers   
+	.aluControl(aluControl),
+	.aluResult(aluResult),
+	.inputA(inputA),
+	.inputB(inputB),
+	.shamt(shamt),
+	.zero(zero)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// aluControl[ 3 ]
+initial
+begin
+	aluControl[3] = 1'b0;
+	aluControl[3] = #400000 1'b1;
+	aluControl[3] = #480000 1'b0;
+	aluControl[3] = #20000 1'b1;
+	aluControl[3] = #60000 1'b0;
+end 
+// aluControl[ 2 ]
+initial
+begin
+	aluControl[2] = 1'b0;
+	aluControl[2] = #240000 1'b1;
+	aluControl[2] = #160000 1'b0;
+	aluControl[2] = #320000 1'b1;
+	aluControl[2] = #160000 1'b0;
+	aluControl[2] = #20000 1'b1;
+	aluControl[2] = #60000 1'b0;
+end 
+// aluControl[ 1 ]
+initial
+begin
+	aluControl[1] = 1'b0;
+	aluControl[1] = #160000 1'b1;
+	aluControl[1] = #240000 1'b0;
+	aluControl[1] = #160000 1'b1;
+	aluControl[1] = #160000 1'b0;
+	aluControl[1] = #180000 1'b1;
+	aluControl[1] = #60000 1'b0;
+end 
+// aluControl[ 0 ]
+initial
+begin
+	aluControl[0] = 1'b0;
+	aluControl[0] = #80000 1'b1;
+	aluControl[0] = #80000 1'b0;
+	aluControl[0] = #160000 1'b1;
+	aluControl[0] = #80000 1'b0;
+	aluControl[0] = #80000 1'b1;
+	aluControl[0] = #80000 1'b0;
+	aluControl[0] = #80000 1'b1;
+	aluControl[0] = #80000 1'b0;
+	aluControl[0] = #80000 1'b1;
+	aluControl[0] = #80000 1'b0;
+	aluControl[0] = #20000 1'b1;
+	aluControl[0] = #60000 1'b0;
+end 
+// inputA[ 31 ]
+initial
+begin
+	inputA[31] = 1'b1;
+	inputA[31] = #80000 1'b0;
+	inputA[31] = #240000 1'b1;
+	inputA[31] = #80000 1'b0;
+	inputA[31] = #320000 1'b1;
+	inputA[31] = #80000 1'b0;
+	inputA[31] = #100000 1'b1;
+	inputA[31] = #60000 1'b0;
+end 
+// inputA[ 30 ]
+initial
+begin
+	inputA[30] = 1'b1;
+	inputA[30] = #80000 1'b0;
+	inputA[30] = #240000 1'b1;
+	inputA[30] = #80000 1'b0;
+	inputA[30] = #320000 1'b1;
+	inputA[30] = #80000 1'b0;
+end 
+// inputA[ 29 ]
+initial
+begin
+	inputA[29] = 1'b1;
+	inputA[29] = #80000 1'b0;
+	inputA[29] = #240000 1'b1;
+	inputA[29] = #80000 1'b0;
+	inputA[29] = #320000 1'b1;
+	inputA[29] = #80000 1'b0;
+end 
+// inputA[ 28 ]
+initial
+begin
+	inputA[28] = 1'b1;
+	inputA[28] = #80000 1'b0;
+	inputA[28] = #240000 1'b1;
+	inputA[28] = #80000 1'b0;
+	inputA[28] = #320000 1'b1;
+	inputA[28] = #80000 1'b0;
+	inputA[28] = #100000 1'b1;
+	inputA[28] = #60000 1'b0;
+end 
+// inputA[ 27 ]
+initial
+begin
+	inputA[27] = 1'b0;
+	inputA[27] = #240000 1'b1;
+	inputA[27] = #80000 1'b0;
+	inputA[27] = #400000 1'b1;
+	inputA[27] = #80000 1'b0;
+	inputA[27] = #100000 1'b1;
+	inputA[27] = #60000 1'b0;
+end 
+// inputA[ 26 ]
+initial
+begin
+	inputA[26] = 1'b0;
+	inputA[26] = #240000 1'b1;
+	inputA[26] = #160000 1'b0;
+	inputA[26] = #320000 1'b1;
+	inputA[26] = #80000 1'b0;
+end 
+// inputA[ 25 ]
+initial
+begin
+	inputA[25] = 1'b0;
+	inputA[25] = #240000 1'b1;
+	inputA[25] = #80000 1'b0;
+	inputA[25] = #400000 1'b1;
+	inputA[25] = #80000 1'b0;
+end 
+// inputA[ 24 ]
+initial
+begin
+	inputA[24] = 1'b0;
+	inputA[24] = #720000 1'b1;
+	inputA[24] = #80000 1'b0;
+end 
+// inputA[ 23 ]
+initial
+begin
+	inputA[23] = 1'b1;
+	inputA[23] = #80000 1'b0;
+	inputA[23] = #160000 1'b1;
+	inputA[23] = #80000 1'b0;
+	inputA[23] = #400000 1'b1;
+	inputA[23] = #80000 1'b0;
+end 
+// inputA[ 22 ]
+initial
+begin
+	inputA[22] = 1'b1;
+	inputA[22] = #80000 1'b0;
+	inputA[22] = #160000 1'b1;
+	inputA[22] = #160000 1'b0;
+	inputA[22] = #320000 1'b1;
+	inputA[22] = #80000 1'b0;
+end 
+// inputA[ 21 ]
+initial
+begin
+	inputA[21] = 1'b1;
+	inputA[21] = #320000 1'b0;
+	inputA[21] = #400000 1'b1;
+	inputA[21] = #80000 1'b0;
+	inputA[21] = #100000 1'b1;
+	inputA[21] = #60000 1'b0;
+end 
+// inputA[ 20 ]
+initial
+begin
+	inputA[20] = 1'b1;
+	inputA[20] = #400000 1'b0;
+	inputA[20] = #320000 1'b1;
+	inputA[20] = #80000 1'b0;
+end 
+// inputA[ 19 ]
+initial
+begin
+	inputA[19] = 1'b1;
+	inputA[19] = #160000 1'b0;
+	inputA[19] = #80000 1'b1;
+	inputA[19] = #160000 1'b0;
+end 
+// inputA[ 18 ]
+initial
+begin
+	inputA[18] = 1'b1;
+	inputA[18] = #160000 1'b0;
+	inputA[18] = #160000 1'b1;
+	inputA[18] = #80000 1'b0;
+	inputA[18] = #500000 1'b1;
+	inputA[18] = #60000 1'b0;
+end 
+// inputA[ 17 ]
+initial
+begin
+	inputA[17] = 1'b1;
+	inputA[17] = #320000 1'b0;
+	inputA[17] = #580000 1'b1;
+	inputA[17] = #60000 1'b0;
+end 
+// inputA[ 16 ]
+initial
+begin
+	inputA[16] = 1'b0;
+	inputA[16] = #900000 1'b1;
+	inputA[16] = #60000 1'b0;
+end 
+// inputA[ 15 ]
+initial
+begin
+	inputA[15] = 1'b1;
+	inputA[15] = #160000 1'b0;
+	inputA[15] = #160000 1'b1;
+	inputA[15] = #80000 1'b0;
+	inputA[15] = #500000 1'b1;
+	inputA[15] = #60000 1'b0;
+end 
+// inputA[ 14 ]
+initial
+begin
+	inputA[14] = 1'b0;
+	inputA[14] = #900000 1'b1;
+	inputA[14] = #60000 1'b0;
+end 
+// inputA[ 13 ]
+initial
+begin
+	inputA[13] = 1'b1;
+	inputA[13] = #160000 1'b0;
+	inputA[13] = #160000 1'b1;
+	inputA[13] = #80000 1'b0;
+	inputA[13] = #500000 1'b1;
+	inputA[13] = #60000 1'b0;
+end 
+// inputA[ 12 ]
+initial
+begin
+	inputA[12] = 1'b0;
+	inputA[12] = #320000 1'b1;
+	inputA[12] = #80000 1'b0;
+	inputA[12] = #500000 1'b1;
+	inputA[12] = #60000 1'b0;
+end 
+// inputA[ 11 ]
+initial
+begin
+	inputA[11] = 1'b0;
+	inputA[11] = #80000 1'b1;
+	inputA[11] = #160000 1'b0;
+	inputA[11] = #660000 1'b1;
+	inputA[11] = #60000 1'b0;
+end 
+// inputA[ 10 ]
+initial
+begin
+	inputA[10] = 1'b0;
+	inputA[10] = #80000 1'b1;
+	inputA[10] = #80000 1'b0;
+	inputA[10] = #160000 1'b1;
+	inputA[10] = #80000 1'b0;
+	inputA[10] = #500000 1'b1;
+	inputA[10] = #60000 1'b0;
+end 
+// inputA[ 9 ]
+initial
+begin
+	inputA[9] = 1'b0;
+	inputA[9] = #160000 1'b1;
+	inputA[9] = #240000 1'b0;
+end 
+// inputA[ 8 ]
+initial
+begin
+	inputA[8] = 1'b0;
+	inputA[8] = #320000 1'b1;
+	inputA[8] = #80000 1'b0;
+end 
+// inputA[ 7 ]
+initial
+begin
+	inputA[7] = 1'b0;
+	inputA[7] = #80000 1'b1;
+	inputA[7] = #320000 1'b0;
+	inputA[7] = #320000 1'b1;
+	inputA[7] = #80000 1'b0;
+	inputA[7] = #100000 1'b1;
+	inputA[7] = #60000 1'b0;
+end 
+// inputA[ 6 ]
+initial
+begin
+	inputA[6] = 1'b0;
+	inputA[6] = #80000 1'b1;
+	inputA[6] = #160000 1'b0;
+	inputA[6] = #660000 1'b1;
+	inputA[6] = #60000 1'b0;
+end 
+// inputA[ 5 ]
+initial
+begin
+	inputA[5] = 1'b0;
+	inputA[5] = #80000 1'b1;
+	inputA[5] = #160000 1'b0;
+	inputA[5] = #480000 1'b1;
+	inputA[5] = #80000 1'b0;
+end 
+// inputA[ 4 ]
+initial
+begin
+	inputA[4] = 1'b0;
+	inputA[4] = #80000 1'b1;
+	inputA[4] = #240000 1'b0;
+end 
+// inputA[ 3 ]
+initial
+begin
+	inputA[3] = 1'b1;
+	inputA[3] = #160000 1'b0;
+	inputA[3] = #400000 1'b1;
+	inputA[3] = #160000 1'b0;
+end 
+// inputA[ 2 ]
+initial
+begin
+	inputA[2] = 1'b0;
+	inputA[2] = #80000 1'b1;
+	inputA[2] = #80000 1'b0;
+	inputA[2] = #480000 1'b1;
+	inputA[2] = #160000 1'b0;
+end 
+// inputA[ 1 ]
+initial
+begin
+	inputA[1] = 1'b0;
+	inputA[1] = #80000 1'b1;
+	inputA[1] = #80000 1'b0;
+end 
+// inputA[ 0 ]
+initial
+begin
+	inputA[0] = 1'b0;
+	inputA[0] = #80000 1'b1;
+	inputA[0] = #240000 1'b0;
+	inputA[0] = #320000 1'b1;
+	inputA[0] = #160000 1'b0;
+end 
+// inputB[ 31 ]
+initial
+begin
+	inputB[31] = 1'b1;
+	inputB[31] = #80000 1'b0;
+	inputB[31] = #820000 1'b1;
+	inputB[31] = #60000 1'b0;
+end 
+// inputB[ 30 ]
+initial
+begin
+	inputB[30] = 1'b1;
+	inputB[30] = #80000 1'b0;
+	inputB[30] = #820000 1'b1;
+	inputB[30] = #60000 1'b0;
+end 
+// inputB[ 29 ]
+initial
+begin
+	inputB[29] = 1'b0;
+	inputB[29] = #900000 1'b1;
+	inputB[29] = #60000 1'b0;
+end 
+// inputB[ 28 ]
+initial
+begin
+	inputB[28] = 1'b0;
+	inputB[28] = #480000 1'b1;
+	inputB[28] = #80000 1'b0;
+	inputB[28] = #80000 1'b1;
+	inputB[28] = #80000 1'b0;
+	inputB[28] = #180000 1'b1;
+	inputB[28] = #60000 1'b0;
+end 
+// inputB[ 27 ]
+initial
+begin
+	inputB[27] = 1'b0;
+	inputB[27] = #80000 1'b1;
+	inputB[27] = #80000 1'b0;
+	inputB[27] = #80000 1'b1;
+	inputB[27] = #80000 1'b0;
+	inputB[27] = #160000 1'b1;
+	inputB[27] = #80000 1'b0;
+	inputB[27] = #80000 1'b1;
+	inputB[27] = #160000 1'b0;
+	inputB[27] = #100000 1'b1;
+	inputB[27] = #60000 1'b0;
+end 
+// inputB[ 26 ]
+initial
+begin
+	inputB[26] = 1'b0;
+	inputB[26] = #80000 1'b1;
+	inputB[26] = #80000 1'b0;
+	inputB[26] = #80000 1'b1;
+	inputB[26] = #80000 1'b0;
+	inputB[26] = #400000 1'b1;
+	inputB[26] = #80000 1'b0;
+	inputB[26] = #100000 1'b1;
+	inputB[26] = #60000 1'b0;
+end 
+// inputB[ 25 ]
+initial
+begin
+	inputB[25] = 1'b0;
+	inputB[25] = #240000 1'b1;
+	inputB[25] = #80000 1'b0;
+	inputB[25] = #160000 1'b1;
+	inputB[25] = #80000 1'b0;
+	inputB[25] = #80000 1'b1;
+	inputB[25] = #160000 1'b0;
+	inputB[25] = #100000 1'b1;
+	inputB[25] = #60000 1'b0;
+end 
+// inputB[ 24 ]
+initial
+begin
+	inputB[24] = 1'b1;
+	inputB[24] = #160000 1'b0;
+	inputB[24] = #240000 1'b1;
+	inputB[24] = #400000 1'b0;
+	inputB[24] = #100000 1'b1;
+	inputB[24] = #60000 1'b0;
+end 
+// inputB[ 23 ]
+initial
+begin
+	inputB[23] = 1'b1;
+	inputB[23] = #160000 1'b0;
+	inputB[23] = #80000 1'b1;
+	inputB[23] = #80000 1'b0;
+	inputB[23] = #160000 1'b1;
+	inputB[23] = #80000 1'b0;
+	inputB[23] = #80000 1'b1;
+	inputB[23] = #160000 1'b0;
+	inputB[23] = #100000 1'b1;
+	inputB[23] = #60000 1'b0;
+end 
+// inputB[ 22 ]
+initial
+begin
+	inputB[22] = 1'b1;
+	inputB[22] = #80000 1'b0;
+	inputB[22] = #160000 1'b1;
+	inputB[22] = #80000 1'b0;
+	inputB[22] = #160000 1'b1;
+	inputB[22] = #80000 1'b0;
+	inputB[22] = #80000 1'b1;
+	inputB[22] = #80000 1'b0;
+	inputB[22] = #180000 1'b1;
+	inputB[22] = #60000 1'b0;
+end 
+// inputB[ 21 ]
+initial
+begin
+	inputB[21] = 1'b1;
+	inputB[21] = #80000 1'b0;
+	inputB[21] = #160000 1'b1;
+	inputB[21] = #80000 1'b0;
+	inputB[21] = #80000 1'b1;
+	inputB[21] = #80000 1'b0;
+	inputB[21] = #80000 1'b1;
+	inputB[21] = #80000 1'b0;
+	inputB[21] = #80000 1'b1;
+	inputB[21] = #80000 1'b0;
+	inputB[21] = #100000 1'b1;
+	inputB[21] = #60000 1'b0;
+end 
+// inputB[ 20 ]
+initial
+begin
+	inputB[20] = 1'b1;
+	inputB[20] = #80000 1'b0;
+	inputB[20] = #160000 1'b1;
+	inputB[20] = #80000 1'b0;
+	inputB[20] = #160000 1'b1;
+	inputB[20] = #80000 1'b0;
+	inputB[20] = #80000 1'b1;
+	inputB[20] = #80000 1'b0;
+	inputB[20] = #180000 1'b1;
+	inputB[20] = #60000 1'b0;
+end 
+// inputB[ 19 ]
+initial
+begin
+	inputB[19] = 1'b1;
+	inputB[19] = #320000 1'b0;
+	inputB[19] = #400000 1'b1;
+	inputB[19] = #80000 1'b0;
+	inputB[19] = #100000 1'b1;
+	inputB[19] = #60000 1'b0;
+end 
+// inputB[ 18 ]
+initial
+begin
+	inputB[18] = 1'b0;
+	inputB[18] = #480000 1'b1;
+	inputB[18] = #80000 1'b0;
+	inputB[18] = #80000 1'b1;
+	inputB[18] = #160000 1'b0;
+	inputB[18] = #100000 1'b1;
+	inputB[18] = #60000 1'b0;
+end 
+// inputB[ 17 ]
+initial
+begin
+	inputB[17] = 1'b1;
+	inputB[17] = #320000 1'b0;
+	inputB[17] = #80000 1'b1;
+	inputB[17] = #80000 1'b0;
+	inputB[17] = #80000 1'b1;
+	inputB[17] = #80000 1'b0;
+	inputB[17] = #80000 1'b1;
+	inputB[17] = #80000 1'b0;
+	inputB[17] = #100000 1'b1;
+	inputB[17] = #60000 1'b0;
+end 
+// inputB[ 16 ]
+initial
+begin
+	inputB[16] = 1'b0;
+	inputB[16] = #400000 1'b1;
+	inputB[16] = #400000 1'b0;
+	inputB[16] = #100000 1'b1;
+	inputB[16] = #60000 1'b0;
+end 
+// inputB[ 15 ]
+initial
+begin
+	inputB[15] = 1'b0;
+	inputB[15] = #480000 1'b1;
+	inputB[15] = #80000 1'b0;
+	inputB[15] = #80000 1'b1;
+	inputB[15] = #80000 1'b0;
+	inputB[15] = #180000 1'b1;
+	inputB[15] = #60000 1'b0;
+end 
+// inputB[ 14 ]
+initial
+begin
+	inputB[14] = 1'b1;
+	inputB[14] = #160000 1'b0;
+	inputB[14] = #240000 1'b1;
+	inputB[14] = #80000 1'b0;
+	inputB[14] = #80000 1'b1;
+	inputB[14] = #80000 1'b0;
+	inputB[14] = #260000 1'b1;
+	inputB[14] = #60000 1'b0;
+end 
+// inputB[ 13 ]
+initial
+begin
+	inputB[13] = 1'b0;
+	inputB[13] = #480000 1'b1;
+	inputB[13] = #80000 1'b0;
+	inputB[13] = #80000 1'b1;
+	inputB[13] = #80000 1'b0;
+	inputB[13] = #180000 1'b1;
+	inputB[13] = #60000 1'b0;
+end 
+// inputB[ 12 ]
+initial
+begin
+	inputB[12] = 1'b1;
+	inputB[12] = #160000 1'b0;
+	inputB[12] = #640000 1'b1;
+	inputB[12] = #80000 1'b0;
+	inputB[12] = #20000 1'b1;
+	inputB[12] = #60000 1'b0;
+end 
+// inputB[ 11 ]
+initial
+begin
+	inputB[11] = 1'b0;
+	inputB[11] = #900000 1'b1;
+	inputB[11] = #60000 1'b0;
+end 
+// inputB[ 10 ]
+initial
+begin
+	inputB[10] = 1'b0;
+	inputB[10] = #160000 1'b1;
+	inputB[10] = #80000 1'b0;
+	inputB[10] = #160000 1'b1;
+	inputB[10] = #80000 1'b0;
+	inputB[10] = #80000 1'b1;
+	inputB[10] = #80000 1'b0;
+	inputB[10] = #80000 1'b1;
+	inputB[10] = #80000 1'b0;
+	inputB[10] = #100000 1'b1;
+	inputB[10] = #60000 1'b0;
+end 
+// inputB[ 9 ]
+initial
+begin
+	inputB[9] = 1'b1;
+	inputB[9] = #320000 1'b0;
+	inputB[9] = #480000 1'b1;
+	inputB[9] = #80000 1'b0;
+	inputB[9] = #20000 1'b1;
+	inputB[9] = #60000 1'b0;
+end 
+// inputB[ 8 ]
+initial
+begin
+	inputB[8] = 1'b0;
+	inputB[8] = #80000 1'b1;
+	inputB[8] = #80000 1'b0;
+	inputB[8] = #240000 1'b1;
+	inputB[8] = #80000 1'b0;
+	inputB[8] = #80000 1'b1;
+	inputB[8] = #80000 1'b0;
+	inputB[8] = #80000 1'b1;
+	inputB[8] = #80000 1'b0;
+	inputB[8] = #100000 1'b1;
+	inputB[8] = #60000 1'b0;
+end 
+// inputB[ 7 ]
+initial
+begin
+	inputB[7] = 1'b0;
+	inputB[7] = #80000 1'b1;
+	inputB[7] = #80000 1'b0;
+	inputB[7] = #80000 1'b1;
+	inputB[7] = #160000 1'b0;
+	inputB[7] = #400000 1'b1;
+	inputB[7] = #80000 1'b0;
+	inputB[7] = #20000 1'b1;
+	inputB[7] = #60000 1'b0;
+end 
+// inputB[ 6 ]
+initial
+begin
+	inputB[6] = 1'b0;
+	inputB[6] = #80000 1'b1;
+	inputB[6] = #80000 1'b0;
+	inputB[6] = #240000 1'b1;
+	inputB[6] = #80000 1'b0;
+	inputB[6] = #80000 1'b1;
+	inputB[6] = #80000 1'b0;
+	inputB[6] = #80000 1'b1;
+	inputB[6] = #160000 1'b0;
+	inputB[6] = #20000 1'b1;
+	inputB[6] = #60000 1'b0;
+end 
+// inputB[ 5 ]
+initial
+begin
+	inputB[5] = 1'b1;
+	inputB[5] = #160000 1'b0;
+	inputB[5] = #160000 1'b1;
+	inputB[5] = #160000 1'b0;
+	inputB[5] = #80000 1'b1;
+	inputB[5] = #80000 1'b0;
+	inputB[5] = #160000 1'b1;
+	inputB[5] = #80000 1'b0;
+	inputB[5] = #20000 1'b1;
+	inputB[5] = #60000 1'b0;
+end 
+// inputB[ 4 ]
+initial
+begin
+	inputB[4] = 1'b1;
+	inputB[4] = #160000 1'b0;
+	inputB[4] = #80000 1'b1;
+	inputB[4] = #80000 1'b0;
+	inputB[4] = #400000 1'b1;
+	inputB[4] = #160000 1'b0;
+	inputB[4] = #20000 1'b1;
+	inputB[4] = #60000 1'b0;
+end 
+// inputB[ 3 ]
+initial
+begin
+	inputB[3] = 1'b1;
+	inputB[3] = #80000 1'b0;
+	inputB[3] = #80000 1'b1;
+	inputB[3] = #80000 1'b0;
+	inputB[3] = #560000 1'b1;
+	inputB[3] = #80000 1'b0;
+	inputB[3] = #20000 1'b1;
+	inputB[3] = #60000 1'b0;
+end 
+// inputB[ 2 ]
+initial
+begin
+	inputB[2] = 1'b0;
+	inputB[2] = #160000 1'b1;
+	inputB[2] = #80000 1'b0;
+	inputB[2] = #80000 1'b1;
+	inputB[2] = #160000 1'b0;
+	inputB[2] = #80000 1'b1;
+	inputB[2] = #80000 1'b0;
+	inputB[2] = #80000 1'b1;
+	inputB[2] = #160000 1'b0;
+	inputB[2] = #20000 1'b1;
+	inputB[2] = #60000 1'b0;
+end 
+// inputB[ 1 ]
+initial
+begin
+	inputB[1] = 1'b0;
+	inputB[1] = #400000 1'b1;
+	inputB[1] = #80000 1'b0;
+	inputB[1] = #80000 1'b1;
+	inputB[1] = #80000 1'b0;
+	inputB[1] = #260000 1'b1;
+	inputB[1] = #60000 1'b0;
+end 
+// inputB[ 0 ]
+initial
+begin
+	inputB[0] = 1'b1;
+	inputB[0] = #80000 1'b0;
+	inputB[0] = #160000 1'b1;
+	inputB[0] = #240000 1'b0;
+	inputB[0] = #80000 1'b1;
+	inputB[0] = #80000 1'b0;
+	inputB[0] = #80000 1'b1;
+	inputB[0] = #80000 1'b0;
+	inputB[0] = #100000 1'b1;
+	inputB[0] = #60000 1'b0;
+end 
+// shamt[ 4 ]
+initial
+begin
+	shamt[4] = 1'b0;
+end 
+// shamt[ 3 ]
+initial
+begin
+	shamt[3] = 1'b0;
+	shamt[3] = #400000 1'b1;
+	shamt[3] = #160000 1'b0;
+end 
+// shamt[ 2 ]
+initial
+begin
+	shamt[2] = 1'b0;
+	shamt[2] = #480000 1'b1;
+	shamt[2] = #80000 1'b0;
+end 
+// shamt[ 1 ]
+initial
+begin
+	shamt[1] = 1'b0;
+end 
+// shamt[ 0 ]
+initial
+begin
+	shamt[0] = 1'b0;
+	shamt[0] = #480000 1'b1;
+	shamt[0] = #80000 1'b0;
+end 
+endmodule
+

@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/simulation/qsim
+valu
+Z1 !s110 1638327153
+!i10b 1
+!s100 0JJ;9ngMfU`Gi`WhkQ`W13
+IQzHGSXAY56GdHUDHXXA?C0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1638327151
+8alu.vo
+Falu.vo
+L0 32
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+!s108 1638327152.000000
+!s107 alu.vo|
+!s90 -work|work|alu.vo|
+!i113 1
+Z4 o-work work
+valu_vlg_vec_tst
+R1
+!i10b 1
+!s100 V;mb]ZiSEKADge1O@AAEk2
+ISHg2[[J34;TEZ;Kj3=AQQ0
+R2
+R0
+w1638327146
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+!s108 1638327153.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4

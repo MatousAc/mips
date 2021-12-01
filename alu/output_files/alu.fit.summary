@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Nov 30 19:39:30 2021
+Fitter Status : Successful - Tue Nov 30 21:46:42 2021
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : alu
 Top-level Entity Name : alu
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 695 / 18,480 ( 4 % )
+Logic utilization (in ALMs) : 700 / 18,480 ( 4 % )
 Total registers : 0
 Total pins : 106 / 224 ( 47 % )
 Total virtual pins : 0
