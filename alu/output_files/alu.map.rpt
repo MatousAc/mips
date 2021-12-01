@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Tue Nov 23 17:51:05 2021
+Tue Nov 30 19:38:33 2021
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -10,7 +10,15 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +42,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Nov 23 17:51:05 2021           ;
-; Quartus Prime Version       ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
-; Revision Name               ; alu                                         ;
-; Top-level Entity Name       ; alu                                         ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Nov 30 19:38:33 2021       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; alu                                         ;
+; Top-level Entity Name           ; alu                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 106                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -149,11 +162,170 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+; alu.vhd                          ; yes             ; User VHDL File  ; C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimate of Logic utilization (ALMs needed) ; 695             ;
+;                                             ;                 ;
+; Combinational ALUT usage for logic          ; 1091            ;
+;     -- 7 input functions                    ; 30              ;
+;     -- 6 input functions                    ; 268             ;
+;     -- 5 input functions                    ; 301             ;
+;     -- 4 input functions                    ; 274             ;
+;     -- <=3 input functions                  ; 218             ;
+;                                             ;                 ;
+; Dedicated logic registers                   ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 106             ;
+;                                             ;                 ;
+; Total DSP Blocks                            ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; inputA[1]~input ;
+; Maximum fan-out                             ; 107             ;
+; Total fan-out                               ; 5167            ;
+; Average fan-out                             ; 3.97            ;
++---------------------------------------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; |alu                       ; 1091 (1091)       ; 0 (0)        ; 0                 ; 0          ; 106  ; 0            ; |alu                ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; res[0]                                              ; Mux96               ; yes                    ;
+; res[1]                                              ; Mux96               ; yes                    ;
+; res[2]                                              ; Mux96               ; yes                    ;
+; res[3]                                              ; Mux96               ; yes                    ;
+; res[4]                                              ; Mux96               ; yes                    ;
+; res[5]                                              ; Mux96               ; yes                    ;
+; res[6]                                              ; Mux96               ; yes                    ;
+; res[7]                                              ; Mux96               ; yes                    ;
+; res[8]                                              ; Mux96               ; yes                    ;
+; res[9]                                              ; Mux96               ; yes                    ;
+; res[10]                                             ; Mux96               ; yes                    ;
+; res[11]                                             ; Mux96               ; yes                    ;
+; res[12]                                             ; Mux96               ; yes                    ;
+; res[13]                                             ; Mux96               ; yes                    ;
+; res[14]                                             ; Mux96               ; yes                    ;
+; res[15]                                             ; Mux96               ; yes                    ;
+; res[16]                                             ; Mux96               ; yes                    ;
+; res[17]                                             ; Mux96               ; yes                    ;
+; res[18]                                             ; Mux96               ; yes                    ;
+; res[19]                                             ; Mux96               ; yes                    ;
+; res[20]                                             ; Mux96               ; yes                    ;
+; res[21]                                             ; Mux96               ; yes                    ;
+; res[22]                                             ; Mux96               ; yes                    ;
+; res[23]                                             ; Mux96               ; yes                    ;
+; res[24]                                             ; Mux96               ; yes                    ;
+; res[25]                                             ; Mux96               ; yes                    ;
+; res[26]                                             ; Mux96               ; yes                    ;
+; res[27]                                             ; Mux96               ; yes                    ;
+; res[28]                                             ; Mux96               ; yes                    ;
+; res[29]                                             ; Mux96               ; yes                    ;
+; res[30]                                             ; Mux96               ; yes                    ;
+; res[31]                                             ; Mux96               ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu|Mux64                 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |alu|Mux64                 ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |alu|Mux64                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |alu|Mux1                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |alu|Mux1                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |alu|Mux1                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |alu|Mux1                  ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |alu|Mux1                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |alu|Mux64                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |alu|Mux64                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |alu|Mux64                 ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |alu|Mux64                 ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |alu|Mux1                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1092                        ;
+;     arith             ; 33                          ;
+;         1 data inputs ; 1                           ;
+;         3 data inputs ; 32                          ;
+;     extend            ; 30                          ;
+;         7 data inputs ; 30                          ;
+;     normal            ; 1029                        ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 74                          ;
+;         3 data inputs ; 111                         ;
+;         4 data inputs ; 274                         ;
+;         5 data inputs ; 301                         ;
+;         6 data inputs ; 268                         ;
+; boundary_port         ; 106                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 8.49                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,21 +334,123 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Tue Nov 23 17:50:55 2021
+    Info: Processing started: Tue Nov 30 19:38:14 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: alu-arch File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 17
     Info (12023): Found entity 1: alu File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 7
 Info (12127): Elaborating entity "alu" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at alu.vhd(45): signal "shamti" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 45
-Error (10779): VHDL error at alu.vhd(45): expression is not constant File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 45
-Error (10658): VHDL Operator error at alu.vhd(45): failed to evaluate call to operator ""&"" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 45
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
-    Error: Peak virtual memory: 5008 megabytes
-    Error: Processing ended: Tue Nov 23 17:51:05 2021
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:23
+Warning (10631): VHDL Process Statement warning at alu.vhd(20): inferring latch(es) for signal or variable "res", which holds its previous value in one or more paths through the process File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[0]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[1]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[2]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[3]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[4]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[5]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[6]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[7]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[8]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[9]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[10]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[11]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[12]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[13]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[14]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[15]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[16]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[17]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[18]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[19]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[20]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[21]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[22]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[23]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[24]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[25]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[26]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[27]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[28]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[29]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[30]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Info (10041): Inferred latch for "res[31]" at alu.vhd(20) File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+Warning (13012): Latch res[0] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[1] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[2] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[3] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[4] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[5] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[6] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[7] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[8] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[9] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[10] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[11] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[12] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[13] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[14] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[15] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[0] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[16] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[17] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[18] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[19] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[20] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[21] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[22] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[23] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[24] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[25] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[26] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[27] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[28] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[29] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[30] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13012): Latch res[31] has unsafe behavior File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 20
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluControl[2] File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 9
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "zero" is stuck at VCC File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/alu.vhd Line: 12
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1197 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 73 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 1091 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 5019 megabytes
+    Info: Processing ended: Tue Nov 30 19:38:33 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:33
 
 
