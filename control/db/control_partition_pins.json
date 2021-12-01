@@ -24,6 +24,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "Beq",
+					"strict" : false
+				},
+				{
+					"name" : "Bne",
+					"strict" : false
+				},
+				{
 					"name" : "MemRead",
 					"strict" : false
 				},
@@ -60,11 +68,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "opcode[0]",
+					"name" : "opcode[2]",
 					"strict" : false
 				},
 				{
-					"name" : "opcode[2]",
+					"name" : "opcode[0]",
 					"strict" : false
 				},
 				{
@@ -80,18 +88,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "funct[1]",
-					"strict" : false
-				},
-				{
-					"name" : "funct[2]",
-					"strict" : false
-				},
-				{
-					"name" : "funct[3]",
-					"strict" : false
-				},
-				{
 					"name" : "funct[4]",
 					"strict" : false
 				},
@@ -101,6 +97,18 @@
 				},
 				{
 					"name" : "funct[5]",
+					"strict" : false
+				},
+				{
+					"name" : "funct[1]",
+					"strict" : false
+				},
+				{
+					"name" : "funct[2]",
+					"strict" : false
+				},
+				{
+					"name" : "funct[3]",
 					"strict" : false
 				}
 			]

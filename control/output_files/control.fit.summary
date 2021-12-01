@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Nov 30 17:13:42 2021
+Fitter Status : Successful - Tue Nov 30 18:29:49 2021
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : control
 Top-level Entity Name : control
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 16 / 18,480 ( < 1 % )
+Logic utilization (in ALMs) : 17 / 18,480 ( < 1 % )
 Total registers : 0
 Total pins : 27 / 224 ( 12 % )
 Total virtual pins : 0

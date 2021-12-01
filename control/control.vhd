@@ -95,7 +95,7 @@ BEGIN
 					MemWrite	<= '0';
 					RegWrite	<= '1';
 					MemtoReg	<= '0';
-			ELSIF(opcode = "001001") THEN -- andi
+			ELSIF(opcode = "001100") THEN -- andi
 					ALUsrc	<= '1';
 					Beq		<= '0';
 					Bne		<= '0';
@@ -103,7 +103,7 @@ BEGIN
 					MemWrite	<= '0';
 					RegWrite	<= '1';
 					MemtoReg	<= '0';
-			ELSIF(opcode = "001001") THEN -- beq
+			ELSIF(opcode = "000100") THEN -- beq
 					ALUsrc	<= '0';
 					Beq		<= '1';
 					Bne		<= '0';
@@ -111,7 +111,7 @@ BEGIN
 					MemWrite	<= '0';
 					RegWrite	<= '0';
 					MemtoReg	<= '0';
-			ELSIF(opcode = "001001") THEN -- bne
+			ELSIF(opcode = "000101") THEN -- bne
 					ALUsrc	<= '0';
 					Beq		<= '0';
 					Bne		<= '1';
@@ -178,7 +178,7 @@ BEGIN
 				when "100000" => aluControl <= "0010"		;	-- add
 				when "100001" => aluControl <= "0010"		;	-- addu
 				when "100100" => aluControl <= "0000"		;	-- and
-				when "001000" => aluControl <= "0000"		;	-- jr (d)
+				when "001000" => aluControl <= "0010"		;	-- jr (d)
 				when "100111" => aluControl <= "1100"		;	-- nor
 				when "100101" => aluControl <= "0001"		;	-- or
 				when "101010" => aluControl <= "0111"		;	-- slt
@@ -202,7 +202,7 @@ BEGIN
 				when "001101" => aluControl <= "0001"		;	-- ori
 				when "001010" => aluControl <= "0111"		;	-- slti
 				when "101011" => aluControl <= "0010"		;	-- sw
-				when "000010" => aluControl <= "0000"		;	-- j (d)
+				when "000010" => aluControl <= "0010"		;	-- j (d)
 				when "000011" => aluControl <= "0010"		;	-- jal
 				when 	others  => aluControl <= "0000"		;	-- ###Error case###
 			end case;
