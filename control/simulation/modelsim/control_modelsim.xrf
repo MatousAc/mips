@@ -1,11 +1,11 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/jonat/Desktop/mips/control/control.vhd
-source_file = 1, C:/Users/jonat/Desktop/mips/control/Waveform.vwf
+source_file = 1, C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/control.vhd
+source_file = 1, C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/Waveform.vwf
 source_file = 1, c:/altera_lite/15.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera_lite/15.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera_lite/15.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, c:/altera_lite/15.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, C:/Users/jonat/Desktop/mips/control/db/control.cbx.xml
+source_file = 1, C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/control/db/control.cbx.xml
 design_name = control
 instance = comp, \RegDst~output\, RegDst~output, control, 1
 instance = comp, \ALUsrc~output\, ALUsrc~output, control, 1
