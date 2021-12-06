@@ -38,9 +38,10 @@ architecture arch of processor is
 	signal ALUop		: std_logic_vector(3 downto 0);
 	
 	-- other things that travel on the wires between components
-	signal ALUResult, readData1, readData2, dataFromMemory,
-		 writeData, jumpAddr	: std_logic_vector(31 downto 0);
-	signal writeReg : std_logic_vector(5 downto 0);
+	signal ALUResult, readData1, readData2, extendedImmediate,
+		dataFromMemory,writeData, jumpAddr	: std_logic_vector(31 downto 0);
+	signal writeReg : std_logic_vector(4 downto 0);
+	signal memoryAddr, instAddr : std_logic_vector(5 downto 0);
 	signal zero : std_logic;
 	
 	
@@ -99,12 +100,12 @@ architecture arch of processor is
 		q 				=> pcAddr
 	);
 	instructions: InstructionMemory port map(
-		address 		=> pcAddr,
+		address 		=> instAddr,
 		clock 		=> fast_clk,
 		q 				=> instruction -- here we use a signal
 	);
 	memory: RAM port map(
-		address 		=> ALUResult, -- for lw
+		address 		=> memoryAddr, -- for lw
 		clock			=> fast_clk,
 		data			=> readData2, -- for sw
 		wren			=> memWrite,
@@ -112,7 +113,7 @@ architecture arch of processor is
 	);
 	sign_extender: sei port map(
 		sixteen 		=> immediate,
-		thirtytwo	=> immediate
+		thirtytwo	=> extendedImmediate
 	);
 	mainALU: alu port map(
 		aluControl 	=> ALUop,
@@ -123,11 +124,19 @@ architecture arch of processor is
 	);
 	
 	
+	-- setting up basic signals
+	instAddr <= pcAddr(5 downto 0);
+	memoryAddr <= ALUResult(5 downto 0);
+	rs <= instruction(25 downto 21);
+	-- #### split up the instruction into all the other wires that 
+	-- directly depend on it as shown with the rs field above
+	
+	
 	-- below should be our process that does all the extra logic
 	-- (muxes [if-else], and, jump, branch, pc+4, etc . . .)
 	process(reset, slow_clk)
 	begin
-	
+		-- A Ton of Logic (actually, it may not be THAT much)
 	end process;
 	
 	
