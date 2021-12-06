@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor
-Sun Dec 05 21:46:48 2021
+Mon Dec 06 17:43:23 2021
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -10,15 +10,7 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -42,27 +34,22 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Dec 05 21:46:48 2021       ;
-; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
-; Revision Name                   ; processor                                   ;
-; Top-level Entity Name           ; processor                                   ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 178                                         ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Mon Dec 06 17:43:23 2021           ;
+; Quartus Prime Version       ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name               ; processor                                   ;
+; Top-level Entity Name       ; processor                                   ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -169,121 +156,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; ../pc/pc.vhd                     ; yes             ; User VHDL File  ; C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/pc/pc.vhd               ;         ;
-; processor.vhd                    ; yes             ; User VHDL File  ; C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 178   ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; reset ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 178   ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |processor                 ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 178  ; 0            ; |processor          ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; pc:pc0|q[0..21,23..30]                 ; Merged with pc:pc0|q[31]               ;
-; pc:pc0|q[31]                           ; Stuck at GND due to stuck port data_in ;
-; pc:pc0|q[22]                           ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 32 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+---------------+---------------------------+----------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------+---------------------------+----------------------------------------+
-; pc:pc0|q[31]  ; Stuck at GND              ; pc:pc0|q[22]                           ;
-;               ; due to stuck port data_in ;                                        ;
-+---------------+---------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 2                           ;
-;     normal            ; 2                           ;
-;         0 data inputs ; 2                           ;
-; boundary_port         ; 178                         ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Sun Dec 05 21:46:22 2021
+    Info: Processing started: Mon Dec 06 17:43:12 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/ac/desktop/code/vhdl/mips processor/sei/sei.vhd
@@ -311,203 +190,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file process
     Info (12022): Found design unit 1: processor-arch File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 21
     Info (12023): Found entity 1: processor File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 7
 Info (12127): Elaborating entity "processor" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at processor.vhd(11): used implicit default value for signal "inst_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-Warning (10541): VHDL Signal Declaration warning at processor.vhd(12): used implicit default value for signal "read_reg1_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at processor.vhd(13): used implicit default value for signal "read_reg2_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at processor.vhd(14): used implicit default value for signal "write_reg_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at processor.vhd(15): used implicit default value for signal "read_data1_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at processor.vhd(16): used implicit default value for signal "read_data2_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-Warning (10541): VHDL Signal Declaration warning at processor.vhd(17): used implicit default value for signal "write_data_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-Info (12128): Elaborating entity "pc" for hierarchy "pc:pc0" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 39
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "PC_out[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[5]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[6]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[7]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[8]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[9]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[10]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[11]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[12]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[13]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[14]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[15]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[16]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[17]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[18]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[19]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[20]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[21]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[22]" is stuck at VCC File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[23]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[24]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[25]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[26]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[27]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[28]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[29]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[30]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "PC_out[31]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[5]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[6]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[7]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[8]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[9]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[10]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[11]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[12]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[13]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[14]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[15]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[16]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[17]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[18]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[19]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[20]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[21]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[22]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[23]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[24]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[25]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[26]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[27]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[28]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[29]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[30]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "inst_out[31]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 11
-    Warning (13410): Pin "read_reg1_out[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 12
-    Warning (13410): Pin "read_reg1_out[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 12
-    Warning (13410): Pin "read_reg1_out[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 12
-    Warning (13410): Pin "read_reg1_out[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 12
-    Warning (13410): Pin "read_reg1_out[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 12
-    Warning (13410): Pin "read_reg2_out[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 13
-    Warning (13410): Pin "read_reg2_out[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 13
-    Warning (13410): Pin "read_reg2_out[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 13
-    Warning (13410): Pin "read_reg2_out[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 13
-    Warning (13410): Pin "read_reg2_out[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 13
-    Warning (13410): Pin "write_reg_out[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 14
-    Warning (13410): Pin "write_reg_out[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 14
-    Warning (13410): Pin "write_reg_out[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 14
-    Warning (13410): Pin "write_reg_out[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 14
-    Warning (13410): Pin "write_reg_out[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 14
-    Warning (13410): Pin "read_data1_out[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[5]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[6]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[7]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[8]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[9]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[10]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[11]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[12]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[13]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[14]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[15]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[16]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[17]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[18]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[19]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[20]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[21]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[22]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[23]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[24]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[25]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[26]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[27]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[28]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[29]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[30]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data1_out[31]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 15
-    Warning (13410): Pin "read_data2_out[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[5]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[6]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[7]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[8]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[9]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[10]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[11]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[12]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[13]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[14]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[15]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[16]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[17]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[18]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[19]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[20]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[21]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[22]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[23]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[24]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[25]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[26]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[27]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[28]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[29]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[30]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "read_data2_out[31]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 16
-    Warning (13410): Pin "write_data_out[0]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[1]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[2]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[3]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[4]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[5]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[6]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[7]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[8]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[9]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[10]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[11]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[12]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[13]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[14]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[15]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[16]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[17]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[18]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[19]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[20]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[21]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[22]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[23]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[24]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[25]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[26]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[27]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[28]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[29]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[30]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-    Warning (13410): Pin "write_data_out[31]" is stuck at GND File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 17
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 9
-    Warning (15610): No output dependent on input pin "slow_clk" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "fast_clk" File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 10
-Info (21057): Implemented 178 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 175 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 187 warnings
-    Info: Peak virtual memory: 5017 megabytes
-    Info: Processing ended: Sun Dec 05 21:46:48 2021
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:56
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(31): used implicit default value for signal "rt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 31
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(32): used implicit default value for signal "rs" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 32
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(33): used implicit default value for signal "shamt" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 33
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(36): used implicit default value for signal "memWrite" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 36
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(38): used implicit default value for signal "ALUop" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 38
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(41): used implicit default value for signal "readData1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 41
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(41): used implicit default value for signal "readData2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 41
+Warning (10036): Verilog HDL or VHDL warning at processor.vhd(41): object "dataFromMemory" assigned a value but never read File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 41
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(41): used implicit default value for signal "writeData" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 41
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(43): used implicit default value for signal "writeReg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 43
+Error (10344): VHDL expression error at processor.vhd(102): expression has 32 elements, but must have 6 elements File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 102
+Error (10346): VHDL error at processor.vhd(101): formal port or parameter "address" must have actual or default value File: C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/processor.vhd Line: 101
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 10 warnings
+    Error: Peak virtual memory: 5006 megabytes
+    Error: Processing ended: Mon Dec 06 17:43:23 2021
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:25
 
 
