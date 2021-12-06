@@ -9,41 +9,41 @@ z2
 cModel Technology
 Z0 dC:/Users/Ac/Desktop/Code/VHDL/Mips Processor/alu/simulation/qsim
 valu
-Z1 !s110 1638327153
+!s110 1638755597
 !i10b 1
-!s100 0JJ;9ngMfU`Gi`WhkQ`W13
-IQzHGSXAY56GdHUDHXXA?C0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 MfX`79h@m9fMme5D2El2c1
+IcB5YaRHGPQznUCi8]iH^63
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1638327151
+w1638755594
 8alu.vo
 Falu.vo
 L0 32
-Z3 OV;L;10.4b;61
+Z2 OV;L;10.4b;61
 r1
 !s85 0
 31
-!s108 1638327152.000000
+Z3 !s108 1638755597.000000
 !s107 alu.vo|
 !s90 -work|work|alu.vo|
 !i113 1
 Z4 o-work work
 valu_vlg_vec_tst
-R1
+!s110 1638755598
 !i10b 1
 !s100 V;mb]ZiSEKADge1O@AAEk2
 ISHg2[[J34;TEZ;Kj3=AQQ0
-R2
+R1
 R0
-w1638327146
+w1638755584
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 30
-R3
+R2
 r1
 !s85 0
 31
-!s108 1638327153.000000
+R3
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1

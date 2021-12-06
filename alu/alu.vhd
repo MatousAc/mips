@@ -1,6 +1,5 @@
 library ieee;
 use ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
 USE ieee.std_logic_signed.all;
 
@@ -106,7 +105,7 @@ begin
 					when others => res <= inputB;
 				end case;
 			when "1010" => -- sllv
-				case conv_integer(inputA) is
+				case (conv_integer(inputA) mod 32) is
 					when 1 => res <= inputB(30 downto 0) & "0";
 					when 2 => res <= inputB(29 downto 0) & "00";
 					when 3 => res <= inputB(28 downto 0) & "000";
@@ -141,7 +140,7 @@ begin
 					when others => res <= inputB;
 				end case;
 			when "1011" => -- srlv
-				case conv_integer(inputA) is
+				case (conv_integer(inputA) mod 32) is
 					when 1 => res <= "0" & inputB(31 downto 1);
 					when 2 => res <= "00" & inputB(31 downto 2);
 					when 3 => res <= "000" & inputB(31 downto 3);

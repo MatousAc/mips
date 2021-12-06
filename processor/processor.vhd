@@ -1,5 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
 
 entity processor is
 port(
@@ -14,3 +16,7 @@ port(
 	write_data_out		: out std_logic_vector(31 downto 0);
 );
 end processor;
+
+architecture arch of processor is
+	-- declare internal signals needed to connect submodules
+	
