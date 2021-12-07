@@ -34,8 +34,12 @@ architecture arch of processor is
 	
 	-- control bits #### ADD YOUR PART HERE, Jonathan ###
 	signal regDest, jump, branch, memToReg, 
-		memWrite, ALUsrc, regWrite : std_logic;	-- all 1 bit
+		memWrite, ALUsrc, regWrite, jal, jr,
+		beq, bne, memRead 	: std_logic;	-- all 1 bit
 	signal ALUop		: std_logic_vector(3 downto 0);
+	
+	
+	
 	
 	-- other things that travel on the wires between components
 	signal ALUResult, readData1, readData2, extendedImmediate,
