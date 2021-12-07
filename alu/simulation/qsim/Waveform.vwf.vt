@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/05/2021 20:53:04"
+// Generated on "12/07/2021 16:03:51"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          alu
 // 
@@ -58,8 +58,6 @@ begin
 	aluControl[3] = 1'b0;
 	aluControl[3] = #400000 1'b1;
 	aluControl[3] = #480000 1'b0;
-	aluControl[3] = #20000 1'b1;
-	aluControl[3] = #60000 1'b0;
 end 
 // aluControl[ 2 ]
 initial
@@ -109,8 +107,6 @@ begin
 	inputA[31] = #80000 1'b0;
 	inputA[31] = #320000 1'b1;
 	inputA[31] = #80000 1'b0;
-	inputA[31] = #100000 1'b1;
-	inputA[31] = #60000 1'b0;
 end 
 // inputA[ 30 ]
 initial
@@ -141,8 +137,6 @@ begin
 	inputA[28] = #80000 1'b0;
 	inputA[28] = #320000 1'b1;
 	inputA[28] = #80000 1'b0;
-	inputA[28] = #100000 1'b1;
-	inputA[28] = #60000 1'b0;
 end 
 // inputA[ 27 ]
 initial
@@ -625,8 +619,6 @@ end
 initial
 begin
 	inputB[11] = 1'b0;
-	inputB[11] = #900000 1'b1;
-	inputB[11] = #60000 1'b0;
 end 
 // inputB[ 10 ]
 initial
@@ -640,8 +632,6 @@ begin
 	inputB[10] = #80000 1'b0;
 	inputB[10] = #80000 1'b1;
 	inputB[10] = #80000 1'b0;
-	inputB[10] = #100000 1'b1;
-	inputB[10] = #60000 1'b0;
 end 
 // inputB[ 9 ]
 initial
@@ -650,8 +640,6 @@ begin
 	inputB[9] = #320000 1'b0;
 	inputB[9] = #480000 1'b1;
 	inputB[9] = #80000 1'b0;
-	inputB[9] = #20000 1'b1;
-	inputB[9] = #60000 1'b0;
 end 
 // inputB[ 8 ]
 initial
@@ -665,8 +653,6 @@ begin
 	inputB[8] = #80000 1'b0;
 	inputB[8] = #80000 1'b1;
 	inputB[8] = #80000 1'b0;
-	inputB[8] = #100000 1'b1;
-	inputB[8] = #60000 1'b0;
 end 
 // inputB[ 7 ]
 initial
@@ -678,8 +664,6 @@ begin
 	inputB[7] = #160000 1'b0;
 	inputB[7] = #400000 1'b1;
 	inputB[7] = #80000 1'b0;
-	inputB[7] = #20000 1'b1;
-	inputB[7] = #60000 1'b0;
 end 
 // inputB[ 6 ]
 initial
@@ -731,8 +715,6 @@ begin
 	inputB[3] = #80000 1'b0;
 	inputB[3] = #560000 1'b1;
 	inputB[3] = #80000 1'b0;
-	inputB[3] = #20000 1'b1;
-	inputB[3] = #60000 1'b0;
 end 
 // inputB[ 2 ]
 initial
@@ -746,8 +728,6 @@ begin
 	inputB[2] = #80000 1'b0;
 	inputB[2] = #80000 1'b1;
 	inputB[2] = #160000 1'b0;
-	inputB[2] = #20000 1'b1;
-	inputB[2] = #60000 1'b0;
 end 
 // inputB[ 1 ]
 initial
