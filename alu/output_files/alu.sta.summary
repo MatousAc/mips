@@ -3,51 +3,51 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'aluControl[0]'
-Slack : -4.461
-TNS   : -125.591
+Slack : -5.172
+TNS   : -135.058
 
 Type  : Slow 1100mV 85C Model Hold 'aluControl[0]'
-Slack : 1.220
+Slack : 1.189
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'aluControl[0]'
-Slack : 0.173
+Slack : 0.038
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'aluControl[0]'
-Slack : -4.428
-TNS   : -126.122
+Slack : -5.193
+TNS   : -135.995
 
 Type  : Slow 1100mV 0C Model Hold 'aluControl[0]'
-Slack : 0.971
+Slack : 1.100
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'aluControl[0]'
-Slack : 0.167
+Slack : 0.098
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'aluControl[0]'
-Slack : -2.516
-TNS   : -71.580
+Slack : -2.905
+TNS   : -77.159
 
 Type  : Fast 1100mV 85C Model Hold 'aluControl[0]'
-Slack : 0.609
+Slack : 0.420
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'aluControl[0]'
-Slack : -0.168
-TNS   : -6.685
+Slack : -0.224
+TNS   : -8.458
 
 Type  : Fast 1100mV 0C Model Setup 'aluControl[0]'
-Slack : -2.276
-TNS   : -64.896
+Slack : -2.621
+TNS   : -69.630
 
 Type  : Fast 1100mV 0C Model Hold 'aluControl[0]'
-Slack : 0.533
+Slack : 0.410
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'aluControl[0]'
-Slack : -0.127
-TNS   : -5.040
+Slack : -0.172
+TNS   : -6.133
 
 ------------------------------------------------------------

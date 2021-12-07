@@ -136,19 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "inputB[11]",
+					"name" : "inputA[0]",
 					"strict" : false
 				},
 				{
-					"name" : "inputB[12]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[13]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[14]",
+					"name" : "inputB[0]",
 					"strict" : false
 				},
 				{
@@ -160,54 +152,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "inputB[15]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[16]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[17]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[18]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[19]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[20]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[21]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[22]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[23]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[24]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[25]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[26]",
-					"strict" : false
-				},
-				{
 					"name" : "shamt[2]",
 					"strict" : false
 				},
@@ -216,35 +160,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inputB[31]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[27]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[28]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[29]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[30]",
-					"strict" : false
-				},
-				{
-					"name" : "inputA[4]",
-					"strict" : false
-				},
-				{
-					"name" : "inputA[3]",
-					"strict" : false
-				},
-				{
-					"name" : "inputA[2]",
+					"name" : "shamt[4]",
 					"strict" : false
 				},
 				{
@@ -252,23 +168,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "aluControl[1]",
+					"name" : "inputA[2]",
 					"strict" : false
 				},
 				{
-					"name" : "inputA[0]",
+					"name" : "inputA[3]",
 					"strict" : false
 				},
 				{
-					"name" : "shamt[4]",
-					"strict" : false
-				},
-				{
-					"name" : "aluControl[0]",
-					"strict" : false
-				},
-				{
-					"name" : "aluControl[2]",
+					"name" : "inputA[4]",
 					"strict" : false
 				},
 				{
@@ -276,15 +184,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inputA[11]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[3]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[2]",
+					"name" : "aluControl[1]",
 					"strict" : false
 				},
 				{
@@ -292,11 +192,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inputB[0]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[10]",
+					"name" : "inputB[17]",
 					"strict" : false
 				},
 				{
@@ -304,15 +200,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "inputB[8]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[7]",
-					"strict" : false
-				},
-				{
-					"name" : "inputB[6]",
+					"name" : "inputB[25]",
 					"strict" : false
 				},
 				{
@@ -320,19 +208,107 @@
 					"strict" : false
 				},
 				{
+					"name" : "inputB[21]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[29]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[19]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[27]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[23]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[31]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[16]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[24]",
+					"strict" : false
+				},
+				{
 					"name" : "inputB[4]",
 					"strict" : false
 				},
 				{
-					"name" : "inputA[10]",
+					"name" : "inputB[20]",
 					"strict" : false
 				},
 				{
-					"name" : "inputA[9]",
+					"name" : "inputB[12]",
 					"strict" : false
 				},
 				{
-					"name" : "inputA[8]",
+					"name" : "inputB[28]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[18]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[26]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[22]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[14]",
+					"strict" : false
+				},
+				{
+					"name" : "inputB[30]",
 					"strict" : false
 				},
 				{
@@ -357,6 +333,22 @@
 				},
 				{
 					"name" : "inputA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inputA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inputA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inputA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "inputA[8]",
 					"strict" : false
 				},
 				{
@@ -425,6 +417,14 @@
 				},
 				{
 					"name" : "inputA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "aluControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "aluControl[2]",
 					"strict" : false
 				}
 			]
