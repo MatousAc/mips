@@ -2,20 +2,148 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -15.837
+TNS   : -476.873
+
+Type  : Slow 1100mV 85C Model Setup 'slow_clk'
+Slack : -7.786
+TNS   : -6073.506
+
+Type  : Slow 1100mV 85C Model Setup 'fast_clk'
+Slack : -5.916
+TNS   : -198.709
+
+Type  : Slow 1100mV 85C Model Hold 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -4.067
+TNS   : -98.027
+
+Type  : Slow 1100mV 85C Model Hold 'fast_clk'
+Slack : -2.260
+TNS   : -61.524
+
+Type  : Slow 1100mV 85C Model Hold 'slow_clk'
+Slack : -1.980
+TNS   : -911.703
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -3.934
+TNS   : -756.525
+
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fast_clk'
 Slack : -2.636
-TNS   : -11.501
+TNS   : -214.656
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'slow_clk'
+Slack : -0.538
+TNS   : -826.055
+
+Type  : Slow 1100mV 0C Model Setup 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -15.860
+TNS   : -473.909
+
+Type  : Slow 1100mV 0C Model Setup 'slow_clk'
+Slack : -7.577
+TNS   : -6010.364
+
+Type  : Slow 1100mV 0C Model Setup 'fast_clk'
+Slack : -5.716
+TNS   : -189.436
+
+Type  : Slow 1100mV 0C Model Hold 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -4.197
+TNS   : -100.671
+
+Type  : Slow 1100mV 0C Model Hold 'fast_clk'
+Slack : -2.398
+TNS   : -71.267
+
+Type  : Slow 1100mV 0C Model Hold 'slow_clk'
+Slack : -2.104
+TNS   : -1123.153
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -3.916
+TNS   : -764.545
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fast_clk'
 Slack : -2.636
-TNS   : -11.506
+TNS   : -214.820
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'slow_clk'
+Slack : -0.538
+TNS   : -835.223
+
+Type  : Fast 1100mV 85C Model Setup 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -8.559
+TNS   : -254.510
+
+Type  : Fast 1100mV 85C Model Setup 'slow_clk'
+Slack : -4.019
+TNS   : -2988.813
+
+Type  : Fast 1100mV 85C Model Setup 'fast_clk'
+Slack : -2.866
+TNS   : -88.827
+
+Type  : Fast 1100mV 85C Model Hold 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -2.107
+TNS   : -49.896
+
+Type  : Fast 1100mV 85C Model Hold 'fast_clk'
+Slack : -1.250
+TNS   : -33.130
+
+Type  : Fast 1100mV 85C Model Hold 'slow_clk'
+Slack : -1.040
+TNS   : -592.913
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -2.264
+TNS   : -327.589
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fast_clk'
 Slack : -2.174
-TNS   : -9.257
+TNS   : -172.711
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'slow_clk'
+Slack : -0.093
+TNS   : -90.743
+
+Type  : Fast 1100mV 0C Model Setup 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -7.618
+TNS   : -228.453
+
+Type  : Fast 1100mV 0C Model Setup 'slow_clk'
+Slack : -3.526
+TNS   : -2610.545
+
+Type  : Fast 1100mV 0C Model Setup 'fast_clk'
+Slack : -2.410
+TNS   : -72.440
+
+Type  : Fast 1100mV 0C Model Hold 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -1.945
+TNS   : -46.144
+
+Type  : Fast 1100mV 0C Model Hold 'fast_clk'
+Slack : -1.287
+TNS   : -37.352
+
+Type  : Fast 1100mV 0C Model Hold 'slow_clk'
+Slack : -1.053
+TNS   : -668.252
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fast_clk'
 Slack : -2.174
-TNS   : -9.258
+TNS   : -172.805
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_lt14:auto_generated|ram_block1a0~PORT_A_WRITE_ENABLE_REG'
+Slack : -1.917
+TNS   : -283.073
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'slow_clk'
+Slack : -0.093
+TNS   : -93.637
 
 ------------------------------------------------------------
