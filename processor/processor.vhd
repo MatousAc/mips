@@ -6,7 +6,7 @@ use ieee.std_logic_unsigned.all;
 
 entity processor is
 port(
-	resetn					: in	std_logic;
+	resetn				: in	std_logic;
 	slow_clk, fast_clk: in 	std_logic;
 	pc_out, inst_out	: out	std_logic_vector(31 downto 0);
 	read_reg1_out		: out std_logic_vector(4 downto 0);
@@ -14,7 +14,8 @@ port(
 	write_reg_out		: out std_logic_vector(4 downto 0);
 	read_data1_out		: out std_logic_vector(31 downto 0);
 	read_data2_out		: out std_logic_vector(31 downto 0);
-	write_data_out		: out std_logic_vector(31 downto 0)
+	write_data_out		: out std_logic_vector(31 downto 0);
+	pcplusfour			: out std_logic_vector(31 downto 0)
 );
 end processor;
 
@@ -30,22 +31,25 @@ architecture arch of processor is
 	signal rt			: std_logic_vector(4 downto 0);	-- 5 	bit rt
 	signal rs			: std_logic_vector(4 downto 0);	-- 5	bit rs
 	signal shamt		: std_logic_vector(4 downto 0);	-- 5	bit shamt
-	signal jumpAddr	: std_logic_vector(31 downto 0);
 	
 	-- control bits
-	signal regDest, jump, memToReg, 
-		memWrite, ALUsrc, regWrite, jal, jr,
+	signal regDest, memToReg, memWrite, 
+		ALUsrc, regWrite, jump, jal, jr,
 		beq, bne, memRead : std_logic;	-- all 1 bit
 	signal ALUControl	: std_logic_vector(3 downto 0);
 	
 	-- other things that travel on the wires between components
-	signal ALUResult, readData1, readData2, extendedImmediate, 
+	signal ALUResult, ALUbaseInput, -- all 32 bit 
+		readData1, readData2, 
+		extendedImmediate, 
 		signExtendedImmediate, zeroExtendedImmediate,
-		ALUbaseInput, dataFromMemory, writeData,
-		instAddr: std_logic_vector(31 downto 0);
-	signal writeReg : std_logic_vector(4 downto 0);
+		dataFromMemory, writeData, writeDataBeforeJr,
+		currAddr, pcp4, 
+		pcPostBranch, branchAddr, branchShift,
+		jumpAddrRegular, jrAddr, jumpAddr: std_logic_vector(31 downto 0);
+	signal writeRegBeforeJr, writeReg : std_logic_vector(4 downto 0);
 	signal memoryAddr : std_logic_vector(5 downto 0);
-	signal zero : std_logic;
+	signal zero, branch, isJump : std_logic; -- for branching & jumping
 	
 	-- PC
 	component pc -- i took the below directly from the pc.vhd file
@@ -120,10 +124,10 @@ architecture arch of processor is
 		d 				=> pcAddr,
 		clk 			=> slow_clk,
 		resetn		=> resetn,
-		q 				=> instAddr
+		q 				=> currAddr
 	);
 	instructions: InstructionMemory port map(
-		address 		=> instAddr(5 downto 0),
+		address 		=> currAddr(5 downto 0),
 		clock 		=> fast_clk,
 		q 				=> instruction
 	);
@@ -183,36 +187,55 @@ architecture arch of processor is
 	funct <= instruction(5 downto 0);
 	opcode <= instruction(31 downto 26);
 	immediate <= instruction(15 downto 0);
-	-- good example of concatenation to piece together anothe signal:
-	jumpAddr <= pcAddr(31 downto 28) & instruction(25 downto 0) & "00";
+	-- concatenated signals
+	jumpAddrRegular <= pcp4(31 downto 28) & instruction(25 downto 0) & "00";
+	jrAddr <= readData1;
+	isJump <= jump or jal or jr;
+	branchShift <= extendedImmediate(29 downto 0) & "00";
+	branchAddr <= branchShift + pcp4;
 	zeroExtendedImmediate <= x"0000" & immediate;
 	-- memory is small, so only last 6 bits of ALUResult are used to address 64 things
 	memoryAddr <= ALUResult(5 downto 0);
 	
 	
-	-- below should be our process that does all the extra logic
-	-- (muxes [when-else], and, jump, branch, pc+4, etc . . .)
-	pcAddr <= instAddr + 4;
-	
-	-- sign extending vs. zero extending -- ASK DR HALL ABOUT THIS
+	--#####################################################--
+	--####### Logic, Muxes, Branching, Jumping, etc #######--
+	--#####################################################--
+	-- sign extending vs. zero extending --
 	with opcode select extendedImmediate <=
 		zeroExtendedImmediate when "001100", -- andi
 		zeroExtendedImmediate when "001101", -- ori
 		signExtendedImmediate when others;
-	
-	--###################################################--
-	--####### Here is how to do a muxes (I think) #######--
-	--###################################################--
-	with regDest select writeReg <=
+	-- muxes
+	with regDest select writeRegBeforeJr <=
 		rt when '0',
 		rd when '1';
 	-- yep, that's all i think there is to it
 	with ALUsrc select ALUbaseInput <=
 		readData2 when '0',
 		extendedImmediate when '1';
-	with memToReg select writeData <=
+	with memToReg select writeDataBeforeJr <=
 		ALUResult when '0',
 		dataFromMemory when '1';
+	
+	--#### branch and jump logic ####--
+	pcp4 <= currAddr + 4;
+	branch <= (bne and not zero) or (beq and zero);
+	with branch select pcPostBranch <=
+		pcp4 when '0',
+		branchAddr when '1';
+	with jr select JumpAddr <=
+		jumpAddrRegular when '0',
+		jrAddr when '1';
+	with jal select writeReg <=
+		writeRegBeforeJr when '0',
+		"11111" when '1';
+	with jal select writeData <=
+		writeDataBeforeJr when '0',
+		pcp4 when '1';
+	with isJump select pcAddr <=
+		pcPostBranch when '0',
+		jumpAddr when '1';
 	
 	
 	
@@ -227,6 +250,6 @@ architecture arch of processor is
 	write_reg_out	<= writeReg;
 	read_data1_out	<= readData1;
 	read_data2_out	<= readData2;
-	write_data_out	<= writeData;
-	
+	write_data_out	<= writeData;	
+	pcplusfour <= pcp4;
 end arch;

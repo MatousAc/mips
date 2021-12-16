@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/05/2021 21:56:38"
+// Generated on "12/15/2021 23:23:22"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          processor
 // 
@@ -31,11 +31,12 @@ module processor_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg fast_clk;
-reg reset;
+reg resetn;
 reg slow_clk;
 // wires                                               
 wire [31:0] inst_out;
-wire [31:0] PC_out;
+wire [31:0] pc_out;
+wire [31:0] pcplusfour;
 wire [31:0] read_data1_out;
 wire [31:0] read_data2_out;
 wire [4:0] read_reg1_out;
@@ -48,12 +49,13 @@ processor i1 (
 // port map - connection between master ports and signals/registers   
 	.fast_clk(fast_clk),
 	.inst_out(inst_out),
-	.PC_out(PC_out),
+	.pc_out(pc_out),
+	.pcplusfour(pcplusfour),
 	.read_data1_out(read_data1_out),
 	.read_data2_out(read_data2_out),
 	.read_reg1_out(read_reg1_out),
 	.read_reg2_out(read_reg2_out),
-	.reset(reset),
+	.resetn(resetn),
 	.slow_clk(slow_clk),
 	.write_data_out(write_data_out),
 	.write_reg_out(write_reg_out)
@@ -61,13 +63,6 @@ processor i1 (
 initial 
 begin 
 #100000000 $finish;
-end 
-
-// reset
-initial
-begin
-	reset = 1'b0;
-	reset = #2560000 1'b1;
 end 
 
 // slow_clk
