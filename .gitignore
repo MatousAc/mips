@@ -1,0 +1,16 @@
+*.*
+!*.vhdl
+!*.vhd
+!*.qpf
+!*.qip
+!*.mif
+!*.vwf
+!*.wav
+!*/*.vhdl
+!*/*.vhd
+!*/*.qpf
+!*/*.qip
+!*/*.mif
+!*/*.vwf
+!*/*.wav
+!*git*
