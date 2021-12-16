@@ -178,7 +178,8 @@ begin
 				res <= inputA nor inputB;
 			when "1101" => -- lui
 				res <= inputB(15 downto 0) & x"0000";
-			when others => -- do nothing
+			when others => 
+				res <= x"deadbeef";
 			end case;
 	end process;
 	

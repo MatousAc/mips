@@ -15,12 +15,11 @@ port(
 	read_data1_out		: out std_logic_vector(31 downto 0);
 	read_data2_out		: out std_logic_vector(31 downto 0);
 	write_data_out		: out std_logic_vector(31 downto 0);
-	pcplusfour			: out std_logic_vector(31 downto 0)
+	branch_out, jump_out, bneo, beqo	: out std_logic
 );
 end processor;
 
 architecture arch of processor is
-	-- declare internal signals needed to connect submodules
 	-- instruction stuff
 	signal pcAddr 		: std_logic_vector(31 downto 0);	-- 32 bit address
 	signal instruction: std_logic_vector(31 downto 0);	-- 32 bit instruction
@@ -31,6 +30,7 @@ architecture arch of processor is
 	signal rt			: std_logic_vector(4 downto 0);	-- 5 	bit rt
 	signal rs			: std_logic_vector(4 downto 0);	-- 5	bit rs
 	signal shamt		: std_logic_vector(4 downto 0);	-- 5	bit shamt
+
 	
 	-- control bits
 	signal regDest, memToReg, memWrite, 
@@ -46,13 +46,13 @@ architecture arch of processor is
 		dataFromMemory, writeData, writeDataBeforeJr,
 		currAddr, pcp4, 
 		pcPostBranch, branchAddr, branchShift,
-		jumpAddrRegular, jrAddr, jumpAddr: std_logic_vector(31 downto 0);
+		jumpAddrRegular, jrAddr, pcPostJump: std_logic_vector(31 downto 0);
 	signal writeRegBeforeJr, writeReg : std_logic_vector(4 downto 0);
-	signal memoryAddr : std_logic_vector(5 downto 0);
+	signal memoryAddr : std_logic_vector(31 downto 0);
 	signal zero, branch, isJump : std_logic; -- for branching & jumping
 	
 	-- PC
-	component pc -- i took the below directly from the pc.vhd file
+	component pc
 	port(
 		d      :  in    std_logic_vector( 31 downto 0 );
       clk    :  in    std_logic;
@@ -127,12 +127,12 @@ architecture arch of processor is
 		q 				=> currAddr
 	);
 	instructions: InstructionMemory port map(
-		address 		=> currAddr(5 downto 0),
+		address 		=> currAddr(7 downto 2),
 		clock 		=> fast_clk,
 		q 				=> instruction
 	);
 	memory: RAM port map(
-		address 		=> memoryAddr, -- for lw & sw
+		address 		=> memoryAddr(7 downto 2), -- for lw & sw
 		clock			=> fast_clk,
 		data			=> readData2, -- for sw
 		wren			=> memWrite, -- for lw
@@ -147,6 +147,7 @@ architecture arch of processor is
 		inputA		=> readData1,
 		inputB		=> ALUbaseInput,
 		shamt			=> shamt,
+		zero			=> zero,
 		aluResult	=> ALUResult
 	);
 	
@@ -157,6 +158,8 @@ architecture arch of processor is
 		RegDst 		=> regDest,
 		ALUsrc 		=> ALUsrc,
 		Jump 			=> jump,
+		Jal			=> jal,
+		Jr				=> Jr,
 		Beq 			=> beq,
 		Bne 			=> bne,
 		MemRead 		=> memRead,
@@ -178,8 +181,6 @@ architecture arch of processor is
 	);
 	
 	-- setting up basic signals
-	memoryAddr <= ALUResult(5 downto 0);
-	
 	rs <= instruction(25 downto 21);
 	rt <= instruction(20 downto 16);
 	rd <= instruction(15 downto 11);
@@ -191,11 +192,12 @@ architecture arch of processor is
 	jumpAddrRegular <= pcp4(31 downto 28) & instruction(25 downto 0) & "00";
 	jrAddr <= readData1;
 	isJump <= jump or jal or jr;
+	branch <= (bne and not zero) or (beq and zero);
 	branchShift <= extendedImmediate(29 downto 0) & "00";
 	branchAddr <= branchShift + pcp4;
 	zeroExtendedImmediate <= x"0000" & immediate;
 	-- memory is small, so only last 6 bits of ALUResult are used to address 64 things
-	memoryAddr <= ALUResult(5 downto 0);
+	memoryAddr <= ALUResult;
 	
 	
 	--#####################################################--
@@ -210,7 +212,6 @@ architecture arch of processor is
 	with regDest select writeRegBeforeJr <=
 		rt when '0',
 		rd when '1';
-	-- yep, that's all i think there is to it
 	with ALUsrc select ALUbaseInput <=
 		readData2 when '0',
 		extendedImmediate when '1';
@@ -220,36 +221,38 @@ architecture arch of processor is
 	
 	--#### branch and jump logic ####--
 	pcp4 <= currAddr + 4;
-	branch <= (bne and not zero) or (beq and zero);
 	with branch select pcPostBranch <=
 		pcp4 when '0',
 		branchAddr when '1';
-	with jr select JumpAddr <=
-		jumpAddrRegular when '0',
+	
+	with isJump select pcPostJump <=
+		pcPostBranch when '0',
+		jumpAddrRegular when '1';
+
+	with jr select pcAddr <=
+		pcPostJump when '0',
 		jrAddr when '1';
+	
+	-- jal
 	with jal select writeReg <=
 		writeRegBeforeJr when '0',
 		"11111" when '1';
+
 	with jal select writeData <=
 		writeDataBeforeJr when '0',
 		pcp4 when '1';
-	with isJump select pcAddr <=
-		pcPostBranch when '0',
-		jumpAddr when '1';
 	
-	
-	
-	-- outputs assigned below
-	-- here we basically make our final outputs equal to their values
-	-- on the wires in the processor. the values on the wires are the
-	-- "signals" we defined above
-	pc_out 			<= pcAddr;
+	-- outputs
+	pc_out 			<= currAddr;
 	inst_out 		<= instruction;
 	read_reg1_out	<= rs;
 	read_reg2_out	<= rt;
 	write_reg_out	<= writeReg;
 	read_data1_out	<= readData1;
 	read_data2_out	<= readData2;
-	write_data_out	<= writeData;	
-	pcplusfour <= pcp4;
+	write_data_out	<= writeData;
+	branch_out <= branch;
+	jump_out <= isJump;
+	bneo <= bne;
+	beqo <= beq;
 end arch;

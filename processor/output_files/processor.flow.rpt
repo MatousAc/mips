@@ -1,5 +1,5 @@
 Flow report for processor
-Wed Dec 15 23:23:35 2021
+Thu Dec 16 17:22:43 2021
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Dec 15 23:23:35 2021       ;
+; Flow Status                     ; Successful - Thu Dec 16 17:22:43 2021       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; processor                                   ;
 ; Top-level Entity Name           ; processor                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1 / 18,480 ( < 1 % )                        ;
-; Total registers                 ; 1                                           ;
-; Total pins                      ; 210 / 224 ( 94 % )                          ;
+; Logic utilization (in ALMs)     ; 1,324 / 18,480 ( 7 % )                      ;
+; Total registers                 ; 1056                                        ;
+; Total pins                      ; 182 / 224 ( 81 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 64 / 3,153,920 ( < 1 % )                    ;
+; Total block memory bits         ; 4,096 / 3,153,920 ( < 1 % )                 ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/15/2021 23:13:06 ;
+; Start date & time ; 12/16/2021 17:09:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processor           ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 185188964553976.163962798604632       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 185188964553976.163969254631640       ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -98,18 +98,20 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:26     ; 1.0                     ; 5052 MB             ; 00:00:56                           ;
-; Fitter                    ; 00:00:54     ; 1.0                     ; 6440 MB             ; 00:01:22                           ;
-; Assembler                 ; 00:00:10     ; 1.0                     ; 4985 MB             ; 00:00:10                           ;
-; TimeQuest Timing Analyzer ; 00:00:17     ; 1.0                     ; 5246 MB             ; 00:00:17                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4900 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4879 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 4901 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4879 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4905 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4879 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4901 MB             ; 00:00:05                           ;
-; Total                     ; 00:02:13     ; --                      ; --                  ; 00:03:11                           ;
+; Analysis & Synthesis      ; 00:00:23     ; 1.0                     ; 5061 MB             ; 00:00:41                           ;
+; Fitter                    ; 00:01:46     ; 1.1                     ; 6520 MB             ; 00:03:49                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 4999 MB             ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:17     ; 1.8                     ; 5311 MB             ; 00:00:29                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4945 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4892 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4941 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4892 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4941 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4892 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4941 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4892 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4944 MB             ; 00:00:02                           ;
+; Total                     ; 00:02:49     ; --                      ; --                  ; 00:05:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -129,6 +131,8 @@ agreement for further details.
 ; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; entropy          ; Windows 8 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -140,6 +144,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off processor -c pr
 quartus_asm --read_settings_files=off --write_settings_files=off processor -c processor
 quartus_sta processor -c processor
 quartus_eda --read_settings_files=off --write_settings_files=off processor -c processor
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processor -c processor --vector_source="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/test1.vwf" --testbench_file="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/simulation/qsim/test1.vwf.vt"
+quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/simulation/qsim/" processor -c processor
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processor -c processor --vector_source="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/test1.vwf" --testbench_file="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/simulation/qsim/test1.vwf.vt"
 quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/simulation/qsim/" processor -c processor
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off processor -c processor --vector_source="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/test1.vwf" --testbench_file="C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/simulation/qsim/test1.vwf.vt"

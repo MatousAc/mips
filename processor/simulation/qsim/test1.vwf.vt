@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/15/2021 23:23:22"
+// Generated on "12/16/2021 17:22:38"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          processor
 // 
@@ -34,9 +34,12 @@ reg fast_clk;
 reg resetn;
 reg slow_clk;
 // wires                                               
+wire beqo;
+wire bneo;
+wire branch_out;
 wire [31:0] inst_out;
+wire jump_out;
 wire [31:0] pc_out;
-wire [31:0] pcplusfour;
 wire [31:0] read_data1_out;
 wire [31:0] read_data2_out;
 wire [4:0] read_reg1_out;
@@ -47,10 +50,13 @@ wire [4:0] write_reg_out;
 // assign statements (if any)                          
 processor i1 (
 // port map - connection between master ports and signals/registers   
+	.beqo(beqo),
+	.bneo(bneo),
+	.branch_out(branch_out),
 	.fast_clk(fast_clk),
 	.inst_out(inst_out),
+	.jump_out(jump_out),
 	.pc_out(pc_out),
-	.pcplusfour(pcplusfour),
 	.read_data1_out(read_data1_out),
 	.read_data2_out(read_data2_out),
 	.read_reg1_out(read_reg1_out),
@@ -65,20 +71,27 @@ begin
 #100000000 $finish;
 end 
 
+// resetn
+initial
+begin
+	resetn = 1'b0;
+	resetn = #6400000 1'b1;
+end 
+
 // slow_clk
 always
 begin
 	slow_clk = 1'b0;
-	slow_clk = #5000000 1'b1;
-	#5000000;
+	slow_clk = #1000000 1'b1;
+	#1000000;
 end 
 
 // fast_clk
 always
 begin
 	fast_clk = 1'b0;
-	fast_clk = #500000 1'b1;
-	#500000;
+	fast_clk = #250000 1'b1;
+	#250000;
 end 
 endmodule
 

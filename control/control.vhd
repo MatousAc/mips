@@ -32,12 +32,11 @@ BEGIN
 			MemRead	<= '0';
 			MemWrite	<= '0';
 			MemtoReg	<= '0';
+			RegWrite <= '1';
 			IF(funct = "001000") THEN -- If function is jr then change Jr and RegWrite
 				Jr		<= '1';
-				RegWrite <= '0';
 			ELSE
 				Jr		<= '0';
-				RegWrite <= '1';
 			END IF;
 		
 	-- #############################################################
@@ -59,7 +58,7 @@ BEGIN
 		ELSIF(opcode = "000011") THEN -- jal
 			RegDst	<= '0';
 			ALUsrc	<= '0';
-			Jump		<= '0';
+			Jump		<= '1';
 			Jal		<= '1';
 			Jr			<= '0';
 			Beq		<= '0';
