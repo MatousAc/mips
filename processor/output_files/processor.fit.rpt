@@ -1,5 +1,5 @@
 Fitter report for processor
-Thu Dec 16 19:56:45 2021
+Thu Dec 16 20:54:41 2021
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Dec 16 19:56:45 2021       ;
+; Fitter Status                   ; Successful - Thu Dec 16 20:54:41 2021       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; processor                                   ;
 ; Top-level Entity Name           ; processor                                   ;
@@ -155,13 +155,12 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.20        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.0%      ;
-;     Processors 3-4         ;   3.0%      ;
+;     Processors 2-4         ;   6.7%      ;
 +----------------------------+-------------+
 
 
@@ -1462,7 +1461,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; |processor                                ; 1324.0 (101.6)       ; 1533.0 (113.9)                   ; 219.0 (13.1)                                      ; 10.0 (0.7)                       ; 0.0 (0.0)            ; 1542 (174)          ; 1056 (0)                  ; 0 (0)         ; 4096              ; 2     ; 0          ; 182  ; 0            ; |processor                                                                                               ; work         ;
 ;    |InstructionMemory:instructions|       ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |processor|InstructionMemory:instructions                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |processor|InstructionMemory:instructions|altsyncram:altsyncram_component                                ; work         ;
-;          |altsyncram_1v14:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |processor|InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated ; work         ;
+;          |altsyncram_0v14:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |processor|InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated ; work         ;
 ;    |RAM:memory|                           ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |processor|RAM:memory                                                                                    ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |processor|RAM:memory|altsyncram:altsyncram_component                                                    ; work         ;
 ;          |altsyncram_8504:auto_generated| ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 2048              ; 1     ; 0          ; 0    ; 0            ; |processor|RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated                     ; work         ;
@@ -1736,7 +1735,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+------------+-----------+-----------------+----------------------+-----------------+-----------------+-------------------------------------------------------------------+
 ; Name                                                                                                     ; Type ; Mode        ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLAB cells ; MIF       ; Location        ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; Fits in MLABs                                                     ;
 +----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+------------+-----------+-----------------+----------------------+-----------------+-----------------+-------------------------------------------------------------------+
-; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; Single Clock ; 64           ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 2048 ; 64                          ; 32                          ; --                          ; --                          ; 2048                ; 1           ; 0          ; test1.mif ; M10K_X22_Y17_N0 ; Don't care           ; New data        ; New data        ; Yes                                                               ;
+; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; Single Clock ; 64           ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 2048 ; 64                          ; 32                          ; --                          ; --                          ; 2048                ; 1           ; 0          ; test0.mif ; M10K_X22_Y17_N0 ; Don't care           ; New data        ; New data        ; Yes                                                               ;
 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ALTSYNCRAM                     ; AUTO ; Single Port ; Single Clock ; 64           ; 32           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 2048 ; 64                          ; 32                          ; --                          ; --                          ; 2048                ; 1           ; 0          ; None      ; M10K_X22_Y16_N0 ; Don't care           ; New data        ; New data        ; No - Single Port Feed Through New Data with Unregistered Data Out ;
 +----------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+------------+-----------+-----------------+----------------------+-----------------+-----------------+-------------------------------------------------------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
@@ -2074,14 +2073,14 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                                                                                                ; Destination Register                                                                                                           ; Delay Added in ns ;
 +--------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; pc:program_counter|q[7]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a0~porta_address_reg0  ; 1.376             ;
-; pc:program_counter|q[4]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a3~porta_address_reg0  ; 1.364             ;
-; pc:program_counter|q[3]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a2~porta_address_reg0  ; 1.308             ;
-; pc:program_counter|q[6]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a5~porta_address_reg0  ; 1.307             ;
+; pc:program_counter|q[7]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a0~porta_address_reg0  ; 1.376             ;
+; pc:program_counter|q[4]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a3~porta_address_reg0  ; 1.364             ;
+; pc:program_counter|q[3]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a2~porta_address_reg0  ; 1.308             ;
+; pc:program_counter|q[6]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a5~porta_address_reg0  ; 1.307             ;
 ; RegisterFile:registers|registers[15][24]                                                                                       ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a24~porta_datain_reg0                      ; 1.174             ;
 ; RegisterFile:registers|registers[11][24]                                                                                       ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a24~porta_datain_reg0                      ; 1.090             ;
-; pc:program_counter|q[5]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a31~porta_address_reg0 ; 1.051             ;
-; pc:program_counter|q[2]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a1~porta_address_reg0  ; 1.048             ;
+; pc:program_counter|q[5]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a31~porta_address_reg0 ; 1.051             ;
+; pc:program_counter|q[2]                                                                                                        ; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a1~porta_address_reg0  ; 1.048             ;
 ; RegisterFile:registers|registers[3][24]                                                                                        ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a24~porta_datain_reg0                      ; 0.950             ;
 ; RegisterFile:registers|registers[21][30]                                                                                       ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a30~porta_datain_reg0                      ; 0.946             ;
 ; RegisterFile:registers|registers[15][27]                                                                                       ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a27~porta_datain_reg0                      ; 0.946             ;
@@ -2095,8 +2094,8 @@ This will disable optimization of problematic paths and expose them for further 
 ; RegisterFile:registers|registers[28][22]                                                                                       ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a22~porta_datain_reg0                      ; 0.763             ;
 ; RegisterFile:registers|registers[16][6]                                                                                        ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a6~porta_datain_reg0                       ; 0.738             ;
 ; RegisterFile:registers|registers[14][27]                                                                                       ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a27~porta_datain_reg0                      ; 0.734             ;
-; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a16~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a27~porta_datain_reg0                      ; 0.734             ;
-; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a17~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a27~porta_datain_reg0                      ; 0.734             ;
+; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a16~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a27~porta_datain_reg0                      ; 0.734             ;
+; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a17~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a27~porta_datain_reg0                      ; 0.734             ;
 ; RegisterFile:registers|registers[20][6]                                                                                        ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a6~porta_datain_reg0                       ; 0.721             ;
 ; RegisterFile:registers|registers[6][23]                                                                                        ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a23~porta_datain_reg0                      ; 0.720             ;
 ; RegisterFile:registers|registers[20][22]                                                                                       ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a22~porta_datain_reg0                      ; 0.717             ;
@@ -2120,9 +2119,9 @@ This will disable optimization of problematic paths and expose them for further 
 ; RegisterFile:registers|registers[1][0]                                                                                         ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
 ; RegisterFile:registers|registers[2][0]                                                                                         ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
 ; RegisterFile:registers|registers[3][0]                                                                                         ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
-; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a18~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
-; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a19~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
-; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ram_block1a20~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
+; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a18~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
+; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a19~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
+; InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ram_block1a20~porta_address_reg0 ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.671             ;
 ; RegisterFile:registers|registers[27][0]                                                                                        ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a0~porta_datain_reg0                       ; 0.670             ;
 ; RegisterFile:registers|registers[0][27]                                                                                        ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a27~porta_datain_reg0                      ; 0.662             ;
 ; RegisterFile:registers|registers[1][27]                                                                                        ; RAM:memory|altsyncram:altsyncram_component|altsyncram_8504:auto_generated|ram_block1a27~porta_datain_reg0                      ; 0.662             ;
@@ -2211,28 +2210,28 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:12
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:15
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:19
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:20
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 3% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 32% of the available device resources in the region that extends from location X11_Y11 to location X21_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:38
-Info (11888): Total time spent on timing analysis during the Fitter is 7.57 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:45
+Info (11888): Total time spent on timing analysis during the Fitter is 8.58 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:12
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:15
 Info (144001): Generated suppressed messages file C:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/output_files/processor.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 6521 megabytes
-    Info: Processing ended: Thu Dec 16 19:56:47 2021
-    Info: Elapsed time: 00:01:45
-    Info: Total CPU time (on all processors): 00:03:44
+    Info: Processing ended: Thu Dec 16 20:54:43 2021
+    Info: Elapsed time: 00:02:02
+    Info: Total CPU time (on all processors): 00:04:15
 
 
 +----------------------------+

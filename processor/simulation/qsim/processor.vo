@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
 
-// DATE "12/16/2021 19:57:45"
+// DATE "12/16/2021 20:55:50"
 
 // 
 // Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -6376,9 +6376,9 @@ cyclonev_ram_block \instructions|altsyncram_component|auto_generated|ram_block1a
 // synopsys translate_off
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_offset_in_bits = 1;
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_width_in_bits = 1;
-defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .init_file = "test1.mif";
+defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .init_file = "test0.mif";
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .init_file_layout = "port_a";
-defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .logical_ram_name = "InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_1v14:auto_generated|ALTSYNCRAM";
+defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .logical_ram_name = "InstructionMemory:instructions|altsyncram:altsyncram_component|altsyncram_0v14:auto_generated|ALTSYNCRAM";
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .operation_mode = "rom";
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_clear = "none";
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_width = 6;
@@ -6396,8 +6396,8 @@ defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .port_a_
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .port_b_address_width = 6;
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .port_b_data_width = 40;
 defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .ram_block_type = "M20K";
-defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .mem_init1 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
-defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .mem_init0 = "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001817823003421000F003C01000000024970230001816822002001000F000249602200012D580600012D500400000D484200000DB880002E560032000251A82B002A540032000251982A003612003000016D8825000C1000100003E000080020100020000810001200142FFFFD00200100030021EF000100102F0001002001000200102F0003002001000300316FFFFF00016D702400016C682100256CFFFF00240B000200212AFFEC002109001200000000000000004020";
+defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .mem_init1 = "00DEADBEEF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+defparam \instructions|altsyncram_component|auto_generated|ram_block1a0 .mem_init0 = "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001817823003421000F003C01000000024970230001816822002001000F000249602200012D580600012D500400000D484200000DB880002E560032000251A82B002A540032000251982A003612003000016D8825000C1000100003E000080020100020000810001200142FFFFD00200100030021EF000100102F0001002001000200102F0003002001000300316FFFFF00016D702400016C682100256CFFFF00240B000200212AFFEC00210900120000004020";
 // synopsys translate_on
 
 // Location: LABCELL_X31_Y18_N12

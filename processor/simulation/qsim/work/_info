@@ -9,41 +9,41 @@ z2
 cModel Technology
 Z0 dC:/Users/Ac/Desktop/Code/VHDL/Mips Processor/processor/simulation/qsim
 vprocessor
-Z1 !s110 1639702668
+!s110 1639706152
 !i10b 1
-!s100 Oh7gOEBkg]ljSDfEJ;dBf3
-I_RNCWzMQLb6_IBn]7ekjG2
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 M[:iU97;6K[87W28A0HgZ0
+IaHV5`[`<O8aJI9QX`V2Uo2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1639702666
+w1639706150
 8processor.vo
 Fprocessor.vo
 L0 32
-Z3 OV;L;10.4b;61
+Z2 OV;L;10.4b;61
 r1
 !s85 0
 31
-!s108 1639702667.000000
+Z3 !s108 1639706152.000000
 !s107 processor.vo|
 !s90 -work|work|processor.vo|
 !i113 1
 Z4 o-work work
 vprocessor_vlg_vec_tst
-R1
+!s110 1639706153
 !i10b 1
-!s100 >FZ2<dXIA3g=_fkE>6Vc42
-In]:CMzfB63LMMDX;^Qf5W2
-R2
+!s100 26o;<WFf]gb[`GOJzB7M02
+I3GOLDQEd`S9OVNRPWMXCN0
+R1
 R0
-w1639702660
+w1639706145
 8test1.vwf.vt
 Ftest1.vwf.vt
 L0 30
-R3
+R2
 r1
 !s85 0
 31
-!s108 1639702668.000000
+R3
 !s107 test1.vwf.vt|
 !s90 -work|work|test1.vwf.vt|
 !i113 1
