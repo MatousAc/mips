@@ -34,13 +34,9 @@ j1:	jal j2				# jumps to j2				15
 	or $s1, $t3, $t5		# 3 || 2 (2)
 	ori $s2, $s0, 48		# 32 || 48 (48)
 	
-	# slt
-	slt $s3, $s2, $s1		# s3 = 1 if s2 < s1... 48 < 2 (0)
-	slti $s4, $s2, 50		# s3 gets 1
-	sltu $s5, $s2, $s1		# same as s3				20
-	sltiu $s6, $s2, 50		# same as s4
-	
 	# shift
+	slt $s3, $s2, $s1
+	slti $s4, $s2, 50
 	sll $s7, $t5, 2			# shift 2 left by two (8)
 	srl $t1, $t5, 1			# shift 2 right by one (1)
 	sllv $t2, $t5, $t1		# shift 2 left by 1 (8)
@@ -49,12 +45,10 @@ j1:	jal j2				# jumps to j2				15
 # skipping sb, sc, sh, and sw for now
 	# Sub
 	sub $t4, $s2, $t1		# 48 - 1 (47)
-	sub $t5, $t4, 15		# 47 - 15 (32)
 	subu $t6, $s2, $t1		# same as t4
-	subu $t7, $t4, 15		# same as t5
 
 	# Sw and lw
-	addi $s0, $zero, 8
+	addi $s0, $zero, 8							#30
 	addi $s1, $zero, 4
 	
 	sw $s1, 4($s0)
