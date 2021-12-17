@@ -36,7 +36,9 @@ j1:	jal j2				# jumps to j2				15
 	
 	# shift
 	slt $s3, $s2, $s1
+	slt $s3, $s1, $s2
 	slti $s4, $s2, 50
+	slti $s4, $s2, 46
 	sll $s7, $t5, 2			# shift 2 left by two (8)
 	srl $t1, $t5, 1			# shift 2 right by one (1)
 	sllv $t2, $t5, $t1		# shift 2 left by 1 (8)
