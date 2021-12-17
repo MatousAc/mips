@@ -52,3 +52,10 @@ j1:	jal j2				# jumps to j2				15
 	sub $t5, $t4, 15		# 47 - 15 (32)
 	subu $t6, $s2, $t1		# same as t4
 	subu $t7, $t4, 15		# same as t5
+
+	# Sw and lw
+	addi $s0, $zero, 8
+	addi $s1, $zero, 4
+	
+	sw $s1, 4($s0)
+	lw $t1, 4($s0)

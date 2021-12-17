@@ -4,14 +4,5 @@
 	addi $s0, $zero, 8
 	addi $s1, $zero, 4
 	
-	sb $s1, 0($s0)
 	sw $s1, 4($s0)
-	sh $s1, 8($s0)
-	sc $s1, 12($s0)
-	
-	lbu $t0, 0($s0)
 	lw $t1, 4($s0)
-	lhu $t2, 8($s0)
-	ll $t3, 12($s0)
-	
-	lui $t4, 384		# 0000 0001 1000 0000
